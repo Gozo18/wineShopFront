@@ -1,0 +1,49 @@
+.backLink {
+  color: #2d2d2d;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.emptyCartBox {
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    margin-bottom: 2rem;
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0 2rem;
+  width: 100%;
+  height: 100%;
+
+  h3 {
+    margin-bottom: 0;
+    font-weight: 700;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.thanksPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50vh;
+
+  p {
+    text-align: center;
+  }
+}

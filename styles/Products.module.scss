@@ -1,0 +1,45 @@
+.headerBox {
+  display: block;
+  min-height: 8.5rem;
+  text-align: center;
+  color: #494949;
+  text-decoration: none;
+
+  @media (max-width: 991px) {
+    min-height: 7.5rem;
+  }
+
+  h2 {
+    font-weight: 700;
+  }
+}
+
+.price {
+  text-align: center;
+}
+
+.quantityBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.2rem 0rem;
+
+  div {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+
+    @media (max-width: 991px) {
+      font-size: 1.5rem;
+    }
+  }
+  p {
+    margin: 0 1rem;
+    width: 2rem;
+    text-align: center;
+  }
+  svg {
+    color: #494949;
+  }
+}

@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;600;700&display=swap");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Roboto Mono", monospace, sans-serif !important;
+  background: #f1f1f1;
+  --primary: #2d2d2d;
+  --secondary: #535353;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2rem !important;
+
+  @media (max-width: 991px) {
+    font-size: 1.5rem !important;
+  }
+}
+
+h2 {
+  font-size: 1.4rem !important;
+
+  @media (max-width: 991px) {
+    font-size: 1rem !important;
+  }
+}
+
+h3 {
+  font-size: 1.2rem !important;
+
+  @media (max-width: 991px) {
+    font-size: 0.8rem !important;
+  }
+}
+
+p {
+  margin-bottom: 0.5rem !important;
+  font-size: 1rem !important;
+
+  @media (max-width: 991px) {
+    font-size: 0.7rem !important;
+  }
+}
+
+.btn {
+  width: 100% !important;
+  background-color: #2d2d2d !important;
+  border: 1px solid #2d2d2d !important;
+
+  @media (max-width: 991px) {
+    font-size: 0.8rem !important;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+label, input, textarea {
+  font-size: 1rem !important;
+
+  @media (max-width: 991px) {
+    font-size: 0.7rem !important;
+  }
+}
+
+.card {
+  margin-bottom: 2rem;
+
+  @media (max-width: 991px) {
+    margin-bottom: 1rem;
+  }
+}

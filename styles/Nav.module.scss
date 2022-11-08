@@ -1,0 +1,91 @@
+.navSpace {
+  width: 100%;
+  min-height: 7rem;
+
+  @media (max-width: 991px) {
+    min-height: 5rem;
+  }
+}
+
+.navBox {
+  width: 100%;
+
+  @media (max-width: 991px) {
+    position: fixed;
+    top: 0;
+    margin-left: -0.75rem;
+    padding: 0 0.75rem;
+    z-index: 10;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 7rem;
+
+  @media (max-width: 991px) {
+    min-height: 5rem;
+    background-color: #fff;
+  }
+}
+
+.logoImage {
+  width: 58px;
+  height: 53px;
+  filter: invert(0.8);
+  cursor: pointer;
+
+  @media (max-width: 991px) {
+    width: 46px;
+    height: 42px;
+  }
+}
+
+.navCart {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+
+  h3 {
+    margin: 0;
+    padding: 0.25rem;
+    font-size: 0.75rem;
+  }
+
+  svg {
+    font-size: 1.5rem;
+
+    @media (max-width: 991px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  span {
+    background: #ff2626;
+    color: white;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75rem;
+    position: absolute;
+    right: -10%;
+    top: -20%;
+    font-weight: 700;
+    pointer-events: none;
+
+    @media (max-width: 991px) {
+      width: 1rem;
+      height: 1rem;
+      font-size: 0.6rem;
+      right: 4%;
+      top: -13%;
+    }
+  }
+}

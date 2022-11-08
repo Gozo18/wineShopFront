@@ -1,0 +1,8 @@
+.mainHeader {
+  margin-bottom: 4rem;
+  text-align: center;
+
+  @media (max-width: 991px) {
+    margin-bottom: 2rem;
+  }
+}
