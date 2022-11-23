@@ -388,10 +388,10 @@
     "@typescript-eslint/types" "5.30.6"
     "eslint-visitor-keys" "^3.3.0"
 
-"@urql/core@^2.4.3":
-  "integrity" "sha512-JuIbzDu2oASSe+m5u410ceqWQGTF6QK5W/UZaHuzQX+I2wX4aVdPN/NeZnaFFqG3UYw3+ttFHpQK0vrsU6QLFw=="
-  "resolved" "https://registry.npmjs.org/@urql/core/-/core-2.6.0.tgz"
-  "version" "2.6.0"
+"@urql/core@^2.6.1":
+  "integrity" "sha512-gYrEHy3tViJhwIhauK6MIf2Qp09QTsgNHZRd0n71rS+hF6gdwjspf1oKljl4m25+272cJF7fPjBUGmjaiEr7Kg=="
+  "resolved" "https://registry.npmjs.org/@urql/core/-/core-2.6.1.tgz"
+  "version" "2.6.1"
   dependencies:
     "@graphql-typed-document-node/core" "^3.1.1"
     "wonka" "^4.0.14"
@@ -1212,9 +1212,9 @@
     "slash" "^3.0.0"
 
 "graphql@^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0", "graphql@^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0":
-  "integrity" "sha512-qbHgh8Ix+j/qY+a/ZcJnFQ+j8ezakqPiHwPiZhV/3PgGlgf96QMBB5/f2rkiC9sgLoy/xvT6TSiaf2nTHJh5iA=="
-  "resolved" "https://registry.npmjs.org/graphql/-/graphql-16.5.0.tgz"
-  "version" "16.5.0"
+  "integrity" "sha512-KPIBPDlW7NxrbT/eh4qPXz5FiFdL5UbaA0XUNz2Rp3Z3hqBSkbj0GVjwFDztsWVauZUWsbKHgMg++sk8UX0bkw=="
+  "resolved" "https://registry.npmjs.org/graphql/-/graphql-16.6.0.tgz"
+  "version" "16.6.0"
 
 "has-bigints@^1.0.1", "has-bigints@^1.0.2":
   "integrity" "sha512-tSvCKtBr9lkF0Ex0aQiP9N+OpV4zi2r/Nee5VkRDbaqv35RLYMzbwQfFSZZH0kR+Rd6302UJZ2p/bJCEoR3VoQ=="
@@ -2162,12 +2162,12 @@
   dependencies:
     "punycode" "^2.1.0"
 
-"urql@^2.2.2":
-  "integrity" "sha512-jaVhDxWS2gfJLWWupFXtRkTCuGeRX+b9v19PU6TnKIJ7VP+xyrgpNHghHcTBGo58F+rxvCXVNEvSvdlKFMiHhg=="
-  "resolved" "https://registry.npmjs.org/urql/-/urql-2.2.2.tgz"
-  "version" "2.2.2"
+"urql@^2.2.3":
+  "integrity" "sha512-XMkSYJKW9s4ZlbSuxcUz3fTBIykOn0sGileRXQeyZpaRBXJPVz5saSY05k7jdefNxShZtTI+/nr7PYUWQertfg=="
+  "resolved" "https://registry.npmjs.org/urql/-/urql-2.2.3.tgz"
+  "version" "2.2.3"
   dependencies:
-    "@urql/core" "^2.4.3"
+    "@urql/core" "^2.6.1"
     "wonka" "^4.0.14"
 
 "use-sync-external-store@1.1.0":

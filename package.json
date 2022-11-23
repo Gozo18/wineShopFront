@@ -18,7 +18,7 @@
     "react-icons": "^4.4.0",
     "sass": "^1.54.0",
     "styled-components": "^5.3.5",
-    "urql": "^2.2.2",
+    "urql": "^2.2.3",
     "yup": "^0.32.11"
   },
   "devDependencies": {
