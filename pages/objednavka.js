@@ -38,7 +38,7 @@ function objednavka() {
   const handleSubmit = async () => {
     try {
       const response = await fetch(
-        "http://localhost:1337/api/orders?populate=*",
+        "https://wineshopback-production.up.railway.app/api/orders?populate=*",
         {
           method: "POST",
           headers,
