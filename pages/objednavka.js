@@ -13,7 +13,7 @@ function objednavka() {
   const orderedItems = [];
 
   cartItems.map((item) => {
-    const name = item.name + " " + item.year + " " + item.sweetness;
+    let name = item.name + " " + item.year + " " + item.sweetness;
     if(item.attribute != null) {
       name += " " + item.attribute;
     }
