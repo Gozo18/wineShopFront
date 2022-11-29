@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FiShoppingBag } from "react-icons/fi";
+import { FiShoppingBag, FiMapPin } from "react-icons/fi";
 import Cart from "./Cart";
 import { useStateContext } from "../lib/context";
 import { withRouter } from "next/router";
@@ -17,6 +17,7 @@ function Nav({ router }) {
           <Link href='/'>
             <img src='/logo_only.png' alt='logo' className={styles.logoImage} />
           </Link>
+          <div className={styles.navMenu}>
           {(router.pathname != "/kosik") & (router.pathname != "/objednavka") ? (
             <>
               <div onClick={() => setShowCart(true)} className={styles.navCart}>
@@ -33,6 +34,13 @@ function Nav({ router }) {
           ) : (
             <></>
           )}
+          <Link href='/kontakty'>
+            <div className={styles.navContacts}>
+              <FiMapPin />
+              <h3>Kontakty</h3>
+            </div>
+          </Link>
+          </div>
         </div>
       </div>
     </div>
