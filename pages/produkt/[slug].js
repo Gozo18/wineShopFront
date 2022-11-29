@@ -58,7 +58,7 @@ export default function ProductDetails() {
       <div className='col-12 col-lg-6'>
         <img src={image.data.attributes.formats.medium.url} alt={name} />
       </div>
-      <div className='col-col-12 col-lg-6'>
+      <div className='col-col-12 col-lg-6 mb-4'>
         <div className={styles.detailText}>
           <h1>
             {name} {year} <br />{attribute}
