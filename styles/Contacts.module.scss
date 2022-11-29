@@ -1,0 +1,20 @@
+.backLink {
+    color: #2d2d2d;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#contactBox {
+    h1, p {
+        text-align: center;
+    }
+
+    h1 {
+        margin-bottom: 4rem;
+    }
+
+    iframe {
+        margin: 4rem 0;
+        width: 100%;
+    }
+}
