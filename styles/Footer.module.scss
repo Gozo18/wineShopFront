@@ -1,0 +1,11 @@
+.footerBox {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+    width: 100%;
+    font-size: 0.8rem;
+
+    @media (max-width: 991px) {
+        font-size: 0.5rem !important;
+    }
+}

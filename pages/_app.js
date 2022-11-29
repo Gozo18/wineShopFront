@@ -1,6 +1,7 @@
 import "../styles/globals.scss";
 import { Provider, createClient } from "urql";
 import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 import { StateContext } from "../lib/context";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -13,6 +14,7 @@ function MyApp({ Component, pageProps }) {
         <div className='container'>
           <Nav />
           <Component {...pageProps} />
+          <Footer />
         </div>
       </Provider>
     </StateContext>
