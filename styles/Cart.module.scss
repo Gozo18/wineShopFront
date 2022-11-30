@@ -93,6 +93,10 @@
   svg {
     font-size: 8rem;
     color: var(--secondary);
+
+    @media (max-width: 991px) {
+      font-size: 4rem;
+    }
   }
 }
 
