@@ -11,8 +11,8 @@ function MyApp({ Component, pageProps }) {
   return (
     <StateContext>
       <Provider value={client}>
+        <Nav />
         <div className='container'>
-          <Nav />
           <Component {...pageProps} />
           <Footer />
         </div>

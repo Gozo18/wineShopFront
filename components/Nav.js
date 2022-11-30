@@ -12,34 +12,36 @@ function Nav({ router }) {
 
   return (
     <div className={styles.navSpace}>
-      <div className={styles.navBox}>
-        <div className={styles.nav}>
-          <Link href='/'>
-            <img src='/logo_only.png' alt='logo' className={styles.logoImage} />
-          </Link>
-          <div className={styles.navMenu}>
-          {(router.pathname != "/kosik") & (router.pathname != "/objednavka") ? (
-            <>
-              <div onClick={() => setShowCart(true)} className={styles.navCart}>
-                {totalQuantities > 0 && (
-                  <motion.span animate={{ scale: 1 }} initial={{ scale: 0 }}>
-                    {totalQuantities}
-                  </motion.span>
-                )}
-                <FiShoppingBag />
-                <h3>Košík</h3>
+        <div className="container">
+        <div className={styles.navBox}>
+          <div className={styles.nav}>
+            <Link href='/'>
+              <img src='/logo_only.png' alt='logo' className={styles.logoImage} />
+            </Link>
+            <div className={styles.navMenu}>
+            {(router.pathname != "/kosik") & (router.pathname != "/objednavka") ? (
+              <>
+                <div onClick={() => setShowCart(true)} className={styles.navCart}>
+                  {totalQuantities > 0 && (
+                    <motion.span animate={{ scale: 1 }} initial={{ scale: 0 }}>
+                      {totalQuantities}
+                    </motion.span>
+                  )}
+                  <FiShoppingBag />
+                  <h3>Košík</h3>
+                </div>
+                <AnimatePresence>{showCart && <Cart />}</AnimatePresence>
+              </>
+            ) : (
+              <></>
+            )}
+            <Link href='/kontakty'>
+              <div className={styles.navContacts}>
+                <FiMapPin />
+                <h3>Kontakty</h3>
               </div>
-              <AnimatePresence>{showCart && <Cart />}</AnimatePresence>
-            </>
-          ) : (
-            <></>
-          )}
-          <Link href='/kontakty'>
-            <div className={styles.navContacts}>
-              <FiMapPin />
-              <h3>Kontakty</h3>
+            </Link>
             </div>
-          </Link>
           </div>
         </div>
       </div>
