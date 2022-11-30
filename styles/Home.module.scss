@@ -1,8 +1,78 @@
 .mainHeader {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   text-align: center;
 
   @media (max-width: 991px) {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
+}
+
+.mainPar {
+  margin-bottom: 2rem !important;
+
+  @media (max-width: 991px) {
+    margin-bottom: 1rem !important;
+  }
+}
+
+.wineHeader {
+  margin-bottom: 2rem;
+  text-align: center;
+
+  @media (max-width: 991px) {
+    margin-bottom: 1rem;
+  }
+}
+
+.filterBox {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 2rem;
+
+  @media (max-width: 991px) {
+    margin-bottom: 1rem;
+  }
+
+  a {
+    display: block;
+    margin-left: 1rem;
+    color: #2d2d2d;
+    text-decoration: none;
+    font-size: 0.8rem;
+    text-decoration: underline;
+
+    &:hover {
+      color: var(--bs-link-hover-color);
+    }
+
+    &:before {
+      position: relative;
+      left: -0.2rem;
+      display: inline-block;
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 575px) {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+.whiteWine:before {
+  background-color: rgb(76, 187, 76);
+}
+
+.redWine:before {
+  background-color: rgb(160, 52, 52);
+}
+
+.roseWine:before {
+  background-color: rgb(250, 131, 250);
+}
+
+.allWine:before {
+  border: 1px solid #2d2d2d;
 }
