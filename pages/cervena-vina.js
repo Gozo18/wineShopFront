@@ -28,7 +28,7 @@ function cervenaVina() {
         <meta property="og:title" content="Vinařství Iris - červená vína" />
         <meta property="og:type" content="website"/>
         <meta property="og:description" content="Vinařství Iris Pavlov - rodinné vinařství z Pavlova." />
-        <meta property="og:image" content="/logo_only.png" />
+        <meta property="og:image" content="/bottlePal.png" />
         <meta property="og:url" content="https://irispavlov.cz/cervena-vina" />
       </Head>
 
