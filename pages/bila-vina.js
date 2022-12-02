@@ -20,10 +20,16 @@ function bilaVina() {
     <div>
       <Head>
         <title>Bílá vína - Vinařství Iris</title>
+        <meta name="title" content="Bílá vína - Vinařství Iris" />
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name='description' content='Vinařství Iris Pavlov - rodinné vinařství z Pavlova' />
         <link rel='icon' href='/favicon.ico' />
+        <meta property="og:title" content="Vinařství Iris - bílá vína" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:description" content="Vinařství Iris Pavlov - rodinné vinařství z Pavlova." />
+        <meta property="og:image" content="/logo_only.png" />
+        <meta property="og:url" content="https://irispavlov.cz/bila-vina" />
       </Head>
 
       <main>
