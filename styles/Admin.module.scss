@@ -27,8 +27,12 @@
 
         span {
             margin: 0 1rem;
-            font-size: 0.6rem;
-            pointer-events: none; 
+            font-size: 0.8rem;
+            pointer-events: none;
+            
+            @media (max-width: 991px) {
+                font-size: 0.6rem;
+            }
         }
     }
 }
