@@ -53,7 +53,7 @@ function kosik() {
     },
     validationSchema: yup.object({
       name: yup.string().trim().required("Prosím, vyplňte vaše jméno."),
-      name: yup.string().trim().required("Prosím, vyplňte vaše příjmení."),
+      surname: yup.string().trim().required("Prosím, vyplňte vaše příjmení."),
       email: yup
         .string()
         .email("Prosím, vyplňte e-mail ve správném tvaru.")

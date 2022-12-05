@@ -79,3 +79,9 @@ label, input, textarea {
     margin-bottom: 1rem;
   }
 }
+
+.accordion-button {
+  @media (max-width: 991px) {
+    font-size: 0.8rem !important;
+  }
+}
