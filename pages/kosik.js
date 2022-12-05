@@ -75,6 +75,7 @@ function kosik() {
           <BsChevronDoubleLeft /> zpět
         </a>
         <h1 className='text-center mt-2'>Objednávka</h1>
+        <p className={styles.orderWarning}>Po objednání budete kontaktovaní pro způsob dopravy a platby.</p>
       </div>
       <div className='col-12 col-lg-6'>
       {cartItems.length >= 1 &&

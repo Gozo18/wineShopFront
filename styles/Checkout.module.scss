@@ -4,6 +4,16 @@
   cursor: pointer;
 }
 
+.orderWarning {
+  margin: 2rem 0 !important;
+  text-align: center;
+  color: rgb(207, 36, 36);
+
+  @media (max-width: 991px) {
+    margin: 1rem 0 !important;
+  }
+}
+
 .emptyCartBox {
   min-height: 40vh;
   display: flex;
