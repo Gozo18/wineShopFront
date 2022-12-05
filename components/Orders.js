@@ -72,7 +72,7 @@ function Orders() {
                         <div id={`collapseText${order.id}`} className="accordion-collapse collapse" aria-labelledby={`heading${order.id}`} data-bs-parent="#ordersAccordion">
                             <div className="accordion-body">
                                 <div className="row">
-                                    <div className="col-12 col-lg-6">
+                                    <div className="col-12 col-lg-6 mb-4">
                                         <p><span>Jméno:</span> {order.attributes.Firstname} {order.attributes.Surname}</p>
                                         <p><span>Ulice:</span> {order.attributes.Street}</p>
                                         <p><span>Město:</span> {order.attributes.Town}</p>
