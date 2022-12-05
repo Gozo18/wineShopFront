@@ -4,13 +4,26 @@
 
   @media (max-width: 991px) {
     min-height: 1.5rem;
+  }
+
+}
+
+.navSpaceFix {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 10;
+
+  @media (max-width: 991px) {
+    position: relative;
+    min-height: 1.5rem;
     
     >div:first-child {
       padding: 0;
       margin: 0;
     }
   }
-
 }
 
 .navBox {
