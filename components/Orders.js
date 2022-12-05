@@ -55,14 +55,15 @@ function Orders() {
   return (
     <div className='row'>
         <div className='col-12 mb-2 mb-lg-4'>
-            <h2 className='text-center mt-2'>Objednávky</h2>
+            <h2 className='text-center mt-2 mb-4'>Objednávky</h2>
             <div className={styles.ordersBox}>
                 <div className="accordion" id="ordersAccordion">
                     {orders.map((order) => (
                     <div className="accordion-item" key={order.id}>
                         <h3 className="accordion-header" id={`heading${order.id}`}>
                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={`#collapseText${order.id}`} aria-expanded="false" aria-controls={`collapseText${order.id}`} onClick={toggleDetails}>
-                                Objednávka číslo {order.id} - {order.attributes.Firstname} {order.attributes.Surname} - {order.attributes.Totalprice},- Kč
+                                <div>Objednávka číslo {order.id}</div>
+                                <div className={styles.orderName}>{order.attributes.Firstname} {order.attributes.Surname} - {order.attributes.Totalprice},- Kč</div>
                             </button>
                         </h3>
                         <div id={`collapseText${order.id}`} className="accordion-collapse collapse" aria-labelledby={`heading${order.id}`} data-bs-parent="#ordersAccordion">

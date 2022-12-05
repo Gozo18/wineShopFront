@@ -19,6 +19,23 @@
         font-size: 0.8rem;
         font-weight: bold;
     }
+
+    /* button {
+        display: flex;
+
+        @media (max-width: 991px) {
+            flex-wrap: wrap;
+            
+            div {
+                width: 100%;
+            }
+        }
+
+    } */
+}
+
+.orderName {
+    margin-left: 1rem;
 }
 
 .productBox {
