@@ -9,15 +9,15 @@
 
     p {
         font-size: 0.8rem !important;
+        font-weight: bold;
 
         span {
-            font-weight: bold;
+            font-weight: normal;
         }
     }
 
     h4 {
         font-size: 0.8rem;
-        font-weight: bold;
     }
 
     button {
@@ -43,9 +43,10 @@
 
 .productBox {
     margin-bottom: 1rem;
+    font-weight: bold;
 
     span {
-        font-weight: bold;
+        font-weight: normal;
     }
 }
 
@@ -55,7 +56,9 @@
 }
 
 .totalPrice {
+    font-weight: bold;
+
     span {
-        font-weight: bold;
+        font-weight: normal;
     }
 }
