@@ -8,7 +8,7 @@ function Orders() {
     const ordersSummary = async () => {
         try {
             const response = await fetch(
-            "https://wineshopback-production.up.railway.app/api/orders?populate=*",
+            "https://wineshopback-production.up.railway.app/api/orders?populate=*&sort[1]=id%3Adesc",
             {
                 method: "GET",
             }
@@ -52,6 +52,10 @@ function Orders() {
 
     console.log(orders);
 
+    function formatMyDate(value, locale = 'cs-CS') {
+        return new Date(value).toLocaleDateString(locale);
+    }
+
   return (
     <div className='row'>
         <div className='col-12 mb-2 mb-lg-4'>
@@ -62,8 +66,7 @@ function Orders() {
                     <div className="accordion-item" key={order.id}>
                         <h3 className="accordion-header" id={`heading${order.id}`}>
                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={`#collapseText${order.id}`} aria-expanded="false" aria-controls={`collapseText${order.id}`} onClick={toggleDetails}>
-                                <div>Objednávka číslo {order.id}</div>
-                                <div className={styles.orderName}>{order.attributes.Firstname} {order.attributes.Surname} - {order.attributes.Totalprice},- Kč</div>
+                                <b>#{order.id}</b> <span>{formatMyDate(order.attributes.createdAt)}</span> <b>{order.attributes.Firstname} {order.attributes.Surname}</b> <span>{order.attributes.Totalprice},- Kč</span>
                             </button>
                         </h3>
                         <div id={`collapseText${order.id}`} className="accordion-collapse collapse" aria-labelledby={`heading${order.id}`} data-bs-parent="#ordersAccordion">

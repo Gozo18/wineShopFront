@@ -20,18 +20,17 @@
         font-weight: bold;
     }
 
-    /* button {
-        display: flex;
-
-        @media (max-width: 991px) {
-            flex-wrap: wrap;
-            
-            div {
-                width: 100%;
-            }
+    button {
+        b {
+            pointer-events: none; 
         }
 
-    } */
+        span {
+            margin: 0 1rem;
+            font-size: 0.6rem;
+            pointer-events: none; 
+        }
+    }
 }
 
 .orderName {
