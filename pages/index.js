@@ -13,8 +13,14 @@ export default function Home() {
   if (error) return <p>Chyba... {error.message}</p>;
   const products = data.products.data;
 
+  const closeModal = (e) => {
+    console.log(document.getElementsByClassName("homepageOverlay"));
+    document.getElementsByClassName("homepageOverlay")[0].style.display = 'none';
+    document.getElementsByClassName("modal")[0].style.display = 'none';
+  }
+
   return (
-    <div>
+    <div className="homepage">
       <Head>
         <title>Vinařství Iris</title>
         <meta name="title" content="Vinařství Iris" />
@@ -59,6 +65,24 @@ export default function Home() {
           ))}
         </div>
       </main>
+      <div className="homepageOverlay">
+        <div className="modal">
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title">Vinařství Iris</h5>
+                <button type="button" className="btn-close"onClick={closeModal}></button>
+              </div>
+              <div className="modal-body">
+                <p>Varování - pokud vám není 18 a více let, prosím, opusťte tyto stránky.</p>
+              </div>
+              <div className="modal-footer">
+                <button type="button" className="btn btn-secondary"onClick={closeModal}>Zavřít</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -38,7 +38,7 @@ function objednavka() {
   const handleSubmit = async () => {
     try {
       const response = await fetch(
-        "https://wineshopback-production.up.railway.app/api/orders?populate=*",
+        "https://strapi-production-16e2.up.railway.app/api/orders?populate=*",
         {
           method: "POST",
           headers,

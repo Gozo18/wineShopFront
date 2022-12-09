@@ -85,3 +85,20 @@ label, input, textarea {
     font-size: 0.8rem !important;
   }
 }
+
+.homepage {
+  
+  .homepageOverlay {
+    position: fixed;
+    top: 0;
+    margin-left: -100%;
+    width: 200%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 9999;
+  }
+
+  .modal {
+    display: block;
+  }
+} 

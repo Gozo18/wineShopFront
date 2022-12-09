@@ -8,7 +8,7 @@ function Orders() {
     const ordersSummary = async () => {
         try {
             const response = await fetch(
-            "https://wineshopback-production.up.railway.app/api/orders?populate=*&sort[1]=id%3Adesc",
+            "https://strapi-production-16e2.up.railway.app/api/orders?populate=*&sort[1]=id%3Adesc",
             {
                 method: "GET",
             }

@@ -34,11 +34,11 @@ return (
     <div className={styles.adminBox}>
         <h1>Administrace</h1>
         
-        {!loggedIn && (
+        {loggedIn && (
             <Orders /> 
         )}
 
-        {loggedIn && (
+        {!loggedIn && (
             <form className='w-100' onSubmit={formik.handleSubmit}>
 
                 <div className='mb-1 mb-lg-3'>
