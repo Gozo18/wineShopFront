@@ -14,7 +14,6 @@ export default function Home() {
   const products = data.products.data;
 
   const closeModal = (e) => {
-    console.log(document.getElementsByClassName("homepageOverlay"));
     document.getElementsByClassName("homepageOverlay")[0].style.display = 'none';
     document.getElementsByClassName("modal")[0].style.display = 'none';
   }
