@@ -9,7 +9,22 @@ export default function Home() {
   const [results] = useQuery({ query: PRODUCT_QUERY });
   const { data, fetching, error } = results;
 
-  if (fetching) return <p>Načítání...</p>;
+  if (fetching) return (
+    <div>
+      <Head>
+        <title>Vinařství Iris</title>
+        <meta name="title" content="Vinařství Iris" />
+        <meta name='description' content='Vinařství Iris Pavlov - rodinné vinařství z Pavlova' />
+        
+        <meta property="og:title" content="Vinařství Iris" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:description" content="Vinařství Iris Pavlov - rodinné vinařství z Pavlova." />
+        <meta property="og:image" content="https://wine-shop-front.vercel.app/bottlePal.png" />
+        <meta property="og:url" content="https://irispavlov.cz" />
+      </Head>
+      <p>Načítání...</p>
+    </div>
+  );
   if (error) return <p>Chyba... {error.message}</p>;
   const products = data.products.data;
 

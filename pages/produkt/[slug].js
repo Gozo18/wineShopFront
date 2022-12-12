@@ -32,7 +32,22 @@ export default function ProductDetails() {
     variables: { slug: query.slug },
   });
   const { data, fetching, error } = results;
-  if (fetching) return <p>Loading...</p>;
+  if (fetching) return (
+    <div>
+      <Head>
+        <title>Vinařství Iris</title>
+        <meta name="title" content="Vinařství Iris" />
+        <meta name='description' content='Vinařství Iris Pavlov - rodinné vinařství z Pavlova' />
+        
+        <meta property="og:title" content="Vinařství Iris" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:description" content="Vinařství Iris Pavlov - rodinné vinařství z Pavlova." />
+        <meta property="og:image" content="https://wine-shop-front.vercel.app/bottlePal.png" />
+        <meta property="og:url" content="https://irispavlov.cz" />
+      </Head>
+      <p>Načítání...</p>
+    </div>
+  );
   if (error) return <p>Oh no... {error.message}</p>;
   //Extract Data
   const {
@@ -55,7 +70,7 @@ export default function ProductDetails() {
         <title>{name} {year} {attribute} - Vinařství Iris</title>
         <meta name="title" content={`${name} ${year} ${attribute} - Vinařství Iris`} />
         <meta name='description' content={`${name} ${year} ${attribute} - Vinařství Iris Pavlov - rodinné vinařství z Pavlova`} />
-        
+
         <meta property="og:title" content={`${name} ${year} ${attribute} - Vinařství Iris Pavlov`} />
         <meta property="og:type" content="website"/>
         <meta property="og:description" content={`${name} ${year} ${attribute} - Vinařství Iris Pavlov - rodinné vinařství z Pavlova`} />
