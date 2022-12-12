@@ -33,8 +33,7 @@ export default function ProductDetails() {
   });
   const { data, fetching, error } = results;
   if (fetching) return (
-    <>
-    {/* <div>
+    <div>
       <Head>
         <title>Vinařství Iris</title>
         <meta name="title" content="Vinařství Iris" />
@@ -47,9 +46,7 @@ export default function ProductDetails() {
         <meta property="og:url" content="https://irispavlov.cz" />
       </Head>
       <p>Načítání...</p>
-    </div> */}
-    
-    </>
+    </div>
   );
   if (error) return <p>Oh no... {error.message}</p>;
   //Extract Data
