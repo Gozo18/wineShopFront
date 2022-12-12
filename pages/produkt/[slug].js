@@ -54,10 +54,8 @@ export default function ProductDetails() {
       <Head>
         <title>{name} {year} {attribute} - Vinařství Iris</title>
         <meta name="title" content={`${name} ${year} ${attribute} - Vinařství Iris`} />
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name='description' content={`${name} ${year} ${attribute} - Vinařství Iris Pavlov - rodinné vinařství z Pavlova`} />
-        <link rel='icon' href='/favicon.ico' />
+        
         <meta property="og:title" content={`${name} ${year} ${attribute} - Vinařství Iris Pavlov`} />
         <meta property="og:type" content="website"/>
         <meta property="og:description" content={`${name} ${year} ${attribute} - Vinařství Iris Pavlov - rodinné vinařství z Pavlova`} />

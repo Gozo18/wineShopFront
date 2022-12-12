@@ -15,10 +15,8 @@ function kontakty() {
         <Head>
         <title>Kontakty - Vinařství Iris</title>
         <meta name="title" content="Kontakty - Vinařství Iris" />
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name='description' content='Kontakty Vinařství Iris Pavlov - rodinné vinařství z Pavlova' />
-        <link rel='icon' href='/favicon.ico' />
+        
         <meta property="og:title" content="Kontakty - Vinařství Iris" />
         <meta property="og:type" content="website"/>
         <meta property="og:description" content="Vinařství Iris Pavlov - rodinné vinařství z Pavlova." />

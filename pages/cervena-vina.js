@@ -21,10 +21,8 @@ function cervenaVina() {
       <Head>
         <title>Červená vína - Vinařství Iris</title>
         <meta name="title" content="Červená vína - Vinařství Iris" />
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name='description' content='Vinařství Iris Pavlov - rodinné vinařství z Pavlova' />
-        <link rel='icon' href='/favicon.ico' />
+        
         <meta property="og:title" content="Vinařství Iris - červená vína" />
         <meta property="og:type" content="website"/>
         <meta property="og:description" content="Vinařství Iris Pavlov - rodinné vinařství z Pavlova." />
