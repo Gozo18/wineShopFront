@@ -61,7 +61,7 @@ export default function ProductDetails() {
         <meta property="og:title" content={`${name} ${year} ${attribute} - Vinařství Iris Pavlov`} />
         <meta property="og:type" content="website"/>
         <meta property="og:description" content={`${name} ${year} ${attribute} - Vinařství Iris Pavlov - rodinné vinařství z Pavlova`} />
-        <meta property="og:image" content={image.data.attributes.formats.medium.url} />
+        <meta property="og:image" content={`${image.data.attributes.formats.medium.url}`} />
         <meta property="og:url" content="https://irispavlov.cz" />
       </Head>
     

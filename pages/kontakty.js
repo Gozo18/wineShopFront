@@ -22,7 +22,7 @@ function kontakty() {
         <meta property="og:title" content="Kontakty - Vinařství Iris" />
         <meta property="og:type" content="website"/>
         <meta property="og:description" content="Vinařství Iris Pavlov - rodinné vinařství z Pavlova." />
-        <meta property="og:image" content="/bottlePal.png" />
+        <meta property="og:image" content="https://wine-shop-front.vercel.app/bottlePal.png" />
         <meta property="og:url" content="https://irispavlov.cz" />
       </Head>
 
