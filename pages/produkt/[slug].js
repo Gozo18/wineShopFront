@@ -12,7 +12,7 @@ import { useEffect } from "react";
 import styles from "../../styles/Detail.module.scss";
 
 
-function ProductDetails({data}) {
+/* function ProductDetails({data}) {
   //Use state
   const { increaseQty, decreaseQty, qty, onAdd, setQty } = useStateContext();
 
@@ -133,9 +133,9 @@ export async function getServerSideProps(context) {
   return { props: { data } }
 }
 
-export default ProductDetails;
+export default ProductDetails; */
 
-/* export default function ProductDetails() {
+export default function ProductDetails() {
   //Use state
   const { increaseQty, decreaseQty, qty, onAdd, setQty } = useStateContext();
 
@@ -265,4 +265,4 @@ export default ProductDetails;
       </div>
     </div>
   );
-} */
+}
