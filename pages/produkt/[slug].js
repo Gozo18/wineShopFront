@@ -32,7 +32,7 @@ export default function ProductDetails() {
     variables: { slug: query.slug },
   });
   const { data, fetching, error } = results;
-  if (fetching) return (
+  /* if (fetching) return (
     <div>
       <Head>
         <title>Vinařství Iris</title>
@@ -47,7 +47,7 @@ export default function ProductDetails() {
       </Head>
       <p>Načítání...</p>
     </div>
-  );
+  ); */
   if (error) return <p>Oh no... {error.message}</p>;
   //Extract Data
   const {
