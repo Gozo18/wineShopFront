@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useRouter } from "next/router";
 import { useStateContext } from "../lib/context";
 import { useEffect, useState } from "react";
@@ -64,6 +65,18 @@ function objednavka() {
   }, []);
 
   return (
+    <>
+    <Head>
+      <title>Vinařství Iris</title>
+      <meta name="title" content="Objednávka dokončena - Vinařství Iris" />
+      <meta name='description' content='Vinařství Iris Pavlov - rodinné vinařství z Pavlova' />
+      
+      <meta property="og:title" content="Objednávka dokončena - Vinařství Iris" />
+      <meta property="og:type" content="website"/>
+      <meta property="og:description" content="Vinařství Iris Pavlov - rodinné vinařství z Pavlova." />
+      <meta property="og:image" content="https://wine-shop-front.vercel.app/bottlePal.png" />
+      <meta property="og:url" content="https://irispavlov.cz" />
+    </Head>
     <div className={styles.thanksPage}>
       {sendingMessage ? (
         <h1>Odesílám objednávku...</h1>
@@ -80,6 +93,7 @@ function objednavka() {
         </div>
       )}
     </div>
+    </>
   );
 }
 

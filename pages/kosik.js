@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { FaShoppingCart } from "react-icons/fa";
 import { BsChevronDoubleLeft } from "react-icons/bs";
 import { useRouter } from "next/router";
@@ -69,6 +70,18 @@ function kosik() {
   });
 
   return (
+    <>
+    <Head>
+      <title>Vinařství Iris</title>
+      <meta name="title" content="Košík - Vinařství Iris" />
+      <meta name='description' content='Vinařství Iris Pavlov - rodinné vinařství z Pavlova' />
+      
+      <meta property="og:title" content="Košík - Vinařství Iris" />
+      <meta property="og:type" content="website"/>
+      <meta property="og:description" content="Vinařství Iris Pavlov - rodinné vinařství z Pavlova." />
+      <meta property="og:image" content="https://wine-shop-front.vercel.app/bottlePal.png" />
+      <meta property="og:url" content="https://irispavlov.cz" />
+    </Head>
     <div className='row'>
       <div className='col-12 mb-2 mb-lg-4'>
         <a onClick={() => router.back()} className={styles.backLink}>
@@ -274,6 +287,7 @@ function kosik() {
         }
       </div>
     </div>
+    </>
   );
 }
 
