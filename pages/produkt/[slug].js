@@ -186,6 +186,7 @@ export default function ProductDetails() {
     alcohol,
     locality,
     color,
+    price,
   } = data.products.data[0].attributes;
 
   return (
@@ -202,21 +203,24 @@ export default function ProductDetails() {
         <meta property="og:url" content="https://irispavlov.cz" />
       </Head>
     
-      <div className='row'>
+      <div className='row' itemscope itemtype="https://schema.org/Product">
         <div className='col-12 mb-4'>
           <a onClick={() => router.back()} className={styles.backLink}>
             <BsChevronDoubleLeft /> zpět
           </a>
         </div>
         <div className='col-12 col-lg-6'>
-          <img src={image.data.attributes.formats.medium.url} alt={name} />
+          <img src={image.data.attributes.formats.medium.url} alt={name} itemprop="image" />
         </div>
         <div className='col-col-12 col-lg-6 mb-4'>
           <div className={styles.detailText}>
-            <h1>
+            <h1 itemprop="name">
               {name} {year} <br />{attribute}
             </h1>
             <p>{sweetness}</p>
+            <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+              <p><strong>Cena:</strong> <span itemprop="price" content="1000.00">{price}</span>,- <span itemprop="priceCurrency" content="CZK">Kč</span></p>
+            </div>
             <div className={styles.quantityBox}>
               <div onClick={decreaseQty}>
                 <BsDashSquare />
