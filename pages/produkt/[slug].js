@@ -169,7 +169,9 @@ export default function ProductDetails() {
         <meta property="og:image" content="https://wine-shop-front.vercel.app/bottlePal.png" />
         <meta property="og:url" content="https://irispavlov.cz" />
       </Head>
-      <p>Načítání...</p>
+      <div className="loadingBox">
+        <div className="loader"></div>
+      </div>
     </div>
   );
   if (error) return <p>Oh no... {error.message}</p>;
