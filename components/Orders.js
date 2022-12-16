@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { TbTruckDelivery } from "react-icons/tb";
 import styles from "../styles/Admin.module.scss";
 
 function Orders() {
@@ -24,7 +25,7 @@ function Orders() {
 
     useEffect(() => {
         ordersSummary();
-    }, [setOrders]);
+    });
 
     const toggleDetails = (e) => {
         if(e.target.classList.contains("collapsed")) {
@@ -50,7 +51,61 @@ function Orders() {
         }
     }
 
-    console.log(orders);
+    const deliveryButton = async (e) => {
+        const isDelivered = (e.target.getAttribute("data-delivered"));
+
+        if (isDelivered === "false") {
+            const orderId = e.target.getAttribute("data-orderid");
+            const headers = {
+                "Content-Type": "application/json",
+              };
+            try {
+                const response = await fetch(
+                `https://strapi-production-16e2.up.railway.app/api/orders/${orderId}`,
+                {
+                    method: "PUT",
+                    headers,
+                    body: JSON.stringify({
+                        data: {
+                            Delivered: true,
+                        },
+                    }),
+                  }
+                )
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log(data);
+                });
+            } catch (error) {
+                console.log(error);
+            }
+        } else {
+            const orderId = e.target.getAttribute("data-orderid");
+            const headers = {
+                "Content-Type": "application/json",
+              };
+            try {
+                const response = await fetch(
+                `https://strapi-production-16e2.up.railway.app/api/orders/${orderId}`,
+                {
+                    method: "PUT",
+                    headers,
+                    body: JSON.stringify({
+                        data: {
+                            Delivered: false,
+                        },
+                    }),
+                  }
+                )
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log(data);
+                });
+            } catch (error) {
+                console.log(error);
+            }
+        }
+    }
 
     function formatMyDate(value, locale = 'cs-CS') {
         return new Date(value).toLocaleDateString(locale);
@@ -66,13 +121,13 @@ function Orders() {
                     <div className="accordion-item" key={order.id}>
                         <h3 className="accordion-header" id={`heading${order.id}`}>
                             <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={`#collapseText${order.id}`} aria-expanded="false" aria-controls={`collapseText${order.id}`} onClick={toggleDetails}>
-                                <b>#{order.id}</b> <span>{formatMyDate(order.attributes.createdAt)}</span> <b>{order.attributes.Firstname} {order.attributes.Surname}</b> <span>{order.attributes.Totalprice},- Kč</span>
+                                <b className={order.attributes.Delivered ? (styles.idDelivered) : (styles.idNotDelivered)}>#{order.id}</b> <span>{formatMyDate(order.attributes.createdAt)}</span> <b>{order.attributes.Firstname} {order.attributes.Surname}</b> <span>{order.attributes.Totalprice},- Kč</span>
                             </button>
                         </h3>
                         <div id={`collapseText${order.id}`} className="accordion-collapse collapse" aria-labelledby={`heading${order.id}`} data-bs-parent="#ordersAccordion">
                             <div className="accordion-body">
                                 <div className="row">
-                                    <div className="col-12 col-lg-6 mb-4">
+                                    <div className="col-12 col-lg-6">
                                         <p><span>Jméno:</span> {order.attributes.Firstname} {order.attributes.Surname}</p>
                                         <p><span>Ulice:</span> {order.attributes.Street}</p>
                                         <p><span>Město:</span> {order.attributes.Town}</p>
@@ -94,6 +149,19 @@ function Orders() {
                                         </div>
                                         ))}
                                         <div className={styles.totalPrice}><span>Celková cena objednávky:</span> {order.attributes.Totalprice},-</div>
+                                    </div>
+                                    <div className="col-12">
+                                        <div className={styles.deliveryBox}>
+                                            {order.attributes.Delivered ? (
+                                                <span className={styles.deliveryTrue} onClick={deliveryButton} data-delivered={order.attributes.Delivered} data-orderid={order.id}>
+                                                    <TbTruckDelivery /> Doručeno
+                                                </span>
+                                            ) : (
+                                                <span className={styles.deliveryFalse} onClick={deliveryButton} data-delivered={order.attributes.Delivered} data-orderid={order.id}>
+                                                    <TbTruckDelivery /> Nedoručeno
+                                                </span>
+                                            )}
+                                        </div>
                                     </div>
                                 </div>
                             </div>

@@ -62,3 +62,36 @@
         font-weight: normal;
     }
 }
+
+.idDelivered {
+    color: rgb(17, 128, 2);
+}
+
+.idNotDelivered {
+    color: rgb(194, 33, 33);
+}
+
+.deliveryBox {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+    span {
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-decoration: underline;
+        cursor: pointer;
+
+        @media (max-width: 991px) {
+            font-size: 1rem;
+        }
+    }
+}
+
+.deliveryTrue {
+    color: rgb(17, 128, 2);
+}
+
+.deliveryFalse {
+    color: rgb(194, 33, 33);
+}

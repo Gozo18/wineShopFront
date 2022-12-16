@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Head from "next/head";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import Orders from "../components/Orders";
@@ -16,7 +17,7 @@ function admin() {
           const email = formik.values.email;
           const password = formik.values.password;
     
-          if(email === "admin@admin.cz" && password === "admin") {
+          if(email === process.env.NEXT_PUBLIC_ADMIN_USER && password === process.env.NEXT_PUBLIC_ADMIN_PASSWORD) {
             setLoggedIn(true);
           }
         },
@@ -31,6 +32,12 @@ function admin() {
 
       
 return (
+  <>
+    <Head>
+      <title>Vinařství Iris</title>
+      <meta name="title" content="Objednávky - Vinařství Iris" />
+      <meta name='description' content='Vinařství Iris Pavlov - rodinné vinařství z Pavlova' />
+    </Head>
     <div className={styles.adminBox}>
         <h1>Administrace</h1>
         
@@ -83,6 +90,7 @@ return (
             </form>
         )}
     </div>
+  </>
   )
 }
 
