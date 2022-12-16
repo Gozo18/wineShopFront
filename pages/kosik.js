@@ -211,7 +211,7 @@ function kosik() {
 
           <div className='mb-1 mb-lg-3'>
             <label htmlFor='street' className='form-label'>
-              Ulice
+              Ulice a číslo popisné
             </label>
             <input
               type='text'
