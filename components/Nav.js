@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FiShoppingBag, FiMapPin } from "react-icons/fi";
+import { FiShoppingBag, FiMapPin, FiHome } from "react-icons/fi";
 import Cart from "./Cart";
 import { useStateContext } from "../lib/context";
 import { withRouter } from "next/router";
@@ -40,6 +40,12 @@ function Nav({ router }) {
                 <div className={styles.navContacts}>
                   <FiMapPin />
                   <h3>Kontakty</h3>
+                </div>
+              </Link>
+              <Link href='https://vilapavlov.cz'>
+                <div className={styles.navContacts}>
+                  <FiHome />
+                  <h3>Ubytování</h3>
                 </div>
               </Link>
               </div>
