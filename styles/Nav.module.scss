@@ -52,6 +52,10 @@
 
 .navMenu {
   display: flex;
+
+  @media (max-width: 991px) {
+    flex-direction: row-reverse;
+  }
 }
 
 .logoImage {
@@ -74,14 +78,22 @@
   margin-left: 1rem;
   cursor: pointer;
 
+  @media (max-width: 991px) {
+    margin-left: 0.5rem;
+  }
+
   h3 {
     margin: 0;
     padding: 0.25rem;
-    font-size: 0.75rem;
+    font-size: 0.9rem !important;
+
+    @media (max-width: 991px) {
+      font-size: 0.7rem !important;
+    }
   }
 
   svg {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 
     @media (max-width: 991px) {
       font-size: 1.2rem;

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FiShoppingBag, FiMapPin, FiHome } from "react-icons/fi";
+import { HiOutlineShoppingCart, HiOutlineIdentification, HiOutlineHome, HiOutlineRectangleStack } from "react-icons/hi2";
 import Cart from "./Cart";
 import { useStateContext } from "../lib/context";
 import { withRouter } from "next/router";
@@ -28,7 +28,7 @@ function Nav({ router }) {
                         {totalQuantities}
                       </motion.span>
                     )}
-                    <FiShoppingBag />
+                    <HiOutlineShoppingCart />
                     <h3>Košík</h3>
                   </div>
                   <AnimatePresence>{showCart && <Cart />}</AnimatePresence>
@@ -36,15 +36,21 @@ function Nav({ router }) {
               ) : (
                 <></>
               )}
+              <Link href='/velkoodber'>
+                <div className={styles.navContacts}>
+                  <HiOutlineRectangleStack />
+                  <h3>Velkoodběr</h3>
+                </div>
+              </Link>
               <Link href='/kontakty'>
                 <div className={styles.navContacts}>
-                  <FiMapPin />
+                  <HiOutlineIdentification />
                   <h3>Kontakty</h3>
                 </div>
               </Link>
               <Link href='https://vilapavlov.cz'>
                 <div className={styles.navContacts}>
-                  <FiHome />
+                  <HiOutlineHome />
                   <h3>Ubytování</h3>
                 </div>
               </Link>
