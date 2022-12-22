@@ -3,11 +3,14 @@ import { useQuery } from "urql";
 import { PRODUCT_QUERY } from "../lib/query";
 import Product from "../components/Product";
 import Link from "next/link";
+import { useRouter } from 'next/router'
 import styles from "../styles/Home.module.scss";
 
 export default function Home() {
   const [results] = useQuery({ query: PRODUCT_QUERY });
   const { data, fetching, error } = results;
+
+  const router = useRouter()
 
   if (fetching) return (
     <div>
@@ -27,7 +30,9 @@ export default function Home() {
       </div>
     </div>
   );
-  if (error) return <p>Chyba... {error.message}</p>;
+  if (error) {
+    router.reload(window.location.pathname);
+  }
   const products = data.products.data;
 
   const closeModal = (e) => {

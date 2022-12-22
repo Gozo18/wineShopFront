@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { TbTruckDelivery } from "react-icons/tb";
+import { HiOutlineTruck } from "react-icons/hi2";
 import styles from "../styles/Admin.module.scss";
 
 function Orders() {
@@ -154,11 +154,11 @@ function Orders() {
                                         <div className={styles.deliveryBox}>
                                             {order.attributes.Delivered ? (
                                                 <span className={styles.deliveryTrue} onClick={deliveryButton} data-delivered={order.attributes.Delivered} data-orderid={order.id}>
-                                                    <TbTruckDelivery /> Doručeno
+                                                    <HiOutlineTruck /> Doručeno
                                                 </span>
                                             ) : (
                                                 <span className={styles.deliveryFalse} onClick={deliveryButton} data-delivered={order.attributes.Delivered} data-orderid={order.id}>
-                                                    <TbTruckDelivery /> Nedoručeno
+                                                    <HiOutlineTruck /> Nedoručeno
                                                 </span>
                                             )}
                                         </div>
