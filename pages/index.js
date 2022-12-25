@@ -30,7 +30,9 @@ export default function Home() {
       </div>
     </div>
   );
-  if (error) {
+  if (error) return <p>Chyba... {error.message}</p>;
+
+  if(!data) {
     router.reload(window.location.pathname);
   }
   const products = data.products.data;
