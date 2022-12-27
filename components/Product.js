@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from 'next/image'
 import { useStateContext } from "../lib/context";
 import { useEffect, useState } from "react";
 import { BsPlusSquare, BsDashSquare } from "react-icons/bs";
@@ -33,15 +34,17 @@ export default function Product({ product }) {
   const { name, price, image, slug, year, sweetness, attribute } =
     product.attributes;
 
+  console.log(image);
+
   return (
     <div className='col-6 col-lg-4 col-xl-3'>
       <div className='card w-100'>
         <Link href={`/produkt/${slug}`}>
-          <a>
-            <img
+          <a className={styles.imageBox}>
+            <Image
               src={image.data.attributes.formats.small.url}
               alt={name}
-              className='card-img-top p-3'
+              layout="fill"
             />
           </a>
         </Link>
