@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { FaShoppingCart } from "react-icons/fa";
 import { BsPlusSquare, BsDashSquare, BsXSquare } from "react-icons/bs";
 import Link from "next/link";
@@ -53,12 +54,16 @@ export default function Cart() {
                 key={item.slug}
               >
                 <div className='row'>
-                  <div className='col-5 align-items-center h-100'>
-                    <img
-                      src={item.image.data.attributes.formats.thumbnail.url}
-                    />
+                  <div className='col-4 align-items-center h-100'>
+                    <div className={styles.imageBox}>
+                      <Image
+                        src={item.image.data.attributes.formats.thumbnail.url}
+                        alt={name}
+                        layout="fill"
+                      />
+                    </div>
                   </div>
-                  <div className='col-7'>
+                  <div className='col-8'>
                     <div className={styles.cardInfo}>
                       <h3>
                         {item.name} {item.year}

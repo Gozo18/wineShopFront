@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from 'next/image';
 import { FaShoppingCart } from "react-icons/fa";
 import { BsChevronDoubleLeft } from "react-icons/bs";
 import { useRouter } from "next/router";
@@ -106,9 +107,13 @@ function kosik() {
               <div className='card w-100 mb-3' key={item.slug}>
                 <div className='row g-0'>
                   <div className='col-4 col-lg-2 p-2'>
-                    <img
-                      src={item.image.data.attributes.formats.thumbnail.url}
-                    />
+                    <div className={styles.imageBox}>
+                      <Image
+                        src={item.image.data.attributes.formats.thumbnail.url}
+                        alt={name}
+                        layout="fill"
+                      />
+                    </div>
                   </div>
                   <div className='col-8 col-lg-10'>
                     <div className={styles.cardBody}>

@@ -28,11 +28,28 @@
   }
 }
 
+.imageBox {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 10vh;
+
+  @media (max-width: 575px) {
+    height: 8vh;
+  }
+
+  img {
+    position: relative !important;
+    object-fit: contain;
+  }
+}
+
 .cardBody {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding: 0 2rem;
+  padding: 0.5rem 2rem;
   width: 100%;
   height: 100%;
 
