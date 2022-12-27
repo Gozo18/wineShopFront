@@ -4,6 +4,23 @@
   cursor: pointer;
 }
 
+.imageBox {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 75vh;
+
+  @media (max-width: 575px) {
+    height: 35vh;
+  }
+
+  img {
+    position: relative !important;
+    object-fit: contain;
+  }
+}
+
 .detailText {
   h1 {
     @media (max-width: 991px) {

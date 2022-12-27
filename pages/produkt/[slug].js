@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from 'next/image';
 import { GET_PRODUCT_QUERY } from "../../lib/query";
 import { useQuery } from "urql";
 import { useRouter } from "next/router";
@@ -88,7 +89,14 @@ export default function ProductDetails() {
           </a>
         </div>
         <div className='col-12 col-lg-6'>
-          <img src={image.data.attributes.formats.medium.url} alt={name} itemProp="image" />
+          <div className={styles.imageBox}>
+            <Image
+              src={image.data.attributes.formats.medium.url}
+              alt={name}
+              layout="fill"
+              itemProp="image"
+            />
+          </div>
         </div>
         <div className='col-col-12 col-lg-6 mb-4'>
           <div className={styles.detailText}>
