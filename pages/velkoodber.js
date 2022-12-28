@@ -62,11 +62,11 @@ function velkoodber() {
                 <table className="table table-striped">
                     <thead>
                         <tr>
-                        <th scope="col">Název</th>
-                        <th scope="col">1 kus</th>
-                        <th scope="col">6 kusů</th>
-                        <th scope="col">18 kusů</th>
-                        <th scope="col">30 kusů</th>
+                            <th scope="col">Název</th>
+                            <th scope="col">1 kus</th>
+                            <th scope="col">6 kusů</th>
+                            <th scope="col">18 kusů</th>
+                            <th scope="col">30 kusů</th>
                         </tr>
                     </thead>
                     <tbody>
