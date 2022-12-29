@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from 'next/image';
 import { HiOutlineShoppingCart, HiOutlineIdentification, HiOutlineHome, HiOutlineRectangleStack } from "react-icons/hi2";
 import Cart from "./Cart";
 import { useStateContext } from "../lib/context";
@@ -17,7 +18,12 @@ function Nav({ router }) {
           <div className={styles.navBox}>
             <div className={styles.nav}>
               <Link href='/'>
-                <img src='/logo_only.png' alt='logo' className={styles.logoImage} />
+                <a className={styles.logoImage}>
+                  <Image
+                    src='/logo_only.png' alt='logo'
+                    layout="fill"
+                  />
+                </a>
               </Link>
               <div className={styles.navMenu}>
               {(router.pathname != "/kosik") & (router.pathname != "/objednavka") ? (

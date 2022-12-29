@@ -3,10 +3,13 @@ import { useQuery } from "urql";
 import { PRODUCT_QUERY } from "../lib/query";
 import Product from "../components/Product";
 import Link from "next/link";
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
+import { useStateContext } from "../lib/context";
 import styles from "../styles/Home.module.scss";
 
 export default function Home() {
+  const { showWarning, setShowWarning } = useStateContext();
+
   const [results] = useQuery({ query: PRODUCT_QUERY });
   const { data, fetching, error } = results;
 
@@ -37,9 +40,8 @@ export default function Home() {
   }
   const products = data.products.data;
 
-  const closeModal = (e) => {
-    document.getElementsByClassName("homepageOverlay")[0].style.display = 'none';
-    document.getElementsByClassName("modal")[0].style.display = 'none';
+  const closeModal = () => {
+    setShowWarning(false);
   }
 
   return (
@@ -86,24 +88,26 @@ export default function Home() {
           ))}
         </div>
       </main>
-      <div className="homepageOverlay">
-        <div className="modal">
-          <div className="modal-dialog">
-            <div className="modal-content">
-              <div className="modal-header">
-                <h5 className="modal-title">Vinařství Iris</h5>
-                <button type="button" className="btn-close"onClick={closeModal}></button>
-              </div>
-              <div className="modal-body">
-                <p>Varování - pokud vám není 18 a více let, prosím, opusťte tyto stránky.</p>
-              </div>
-              <div className="modal-footer">
-                <button type="button" className="btn btn-secondary"onClick={closeModal}>Zavřít</button>
+      {showWarning && (
+        <div className="homepageOverlay">
+          <div className="modal">
+            <div className="modal-dialog">
+              <div className="modal-content">
+                <div className="modal-header">
+                  <h5 className="modal-title">Vinařství Iris</h5>
+                  <button type="button" className="btn-close"onClick={closeModal}></button>
+                </div>
+                <div className="modal-body">
+                  <p>Varování - pokud vám není 18 a více let, prosím, opusťte tyto stránky.</p>
+                </div>
+                <div className="modal-footer">
+                  <button type="button" className="btn btn-secondary"onClick={closeModal}>Zavřít</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
