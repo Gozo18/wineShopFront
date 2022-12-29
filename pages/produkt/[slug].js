@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import {
   BsPlusSquare,
   BsDashSquare,
-  BsChevronDoubleLeft,
+  BsChevronDoubleLeft, BsBoxSeam,
 } from "react-icons/bs";
 import { useStateContext } from "../../lib/context";
 import { useEffect } from "react";
@@ -66,7 +66,12 @@ export default function ProductDetails() {
     locality,
     color,
     price,
+    price6Pack,
+    price18Pack,
+    price30Pack,
   } = data.products.data[0].attributes;
+
+  console.log(data.products.data[0].attributes);
 
   return (
     <div>
@@ -105,7 +110,22 @@ export default function ProductDetails() {
             </h1>
             <p>{sweetness}</p>
             <div itemProp="offers" itemScope itemType="https://schema.org/Offer">
-              <p><strong>Cena:</strong> <span itemProp="price" content="1000.00">{price}</span>,- <span itemProp="priceCurrency" content="CZK">Kč</span></p>
+              <div className={styles.detailPrice}>
+                <div>
+                  <strong>Cena:</strong> 
+                </div>
+                <div>
+                  <span itemProp="price" content="1000.00">{price}</span>,- <span itemProp="priceCurrency" content="CZK">Kč</span>
+                </div>
+                <div>
+                  <span><BsBoxSeam /> {price6Pack},-</span>
+                </div>
+                <div>
+                  <span><BsBoxSeam /><BsBoxSeam /><BsBoxSeam /> {price18Pack},-</span>
+                </div>
+                <div>
+                  <span><BsBoxSeam /><BsBoxSeam /><BsBoxSeam /><BsBoxSeam /><BsBoxSeam /> {price30Pack},-</span></div>
+                </div>
             </div>
             <div className={styles.quantityBox}>
               <div onClick={decreaseQty}>

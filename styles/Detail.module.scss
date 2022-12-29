@@ -21,6 +21,20 @@
   }
 }
 
+.detailPrice {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 991px) {
+    flex-direction: column;
+    align-items: center;
+
+    >div {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
 .detailText {
   h1 {
     @media (max-width: 991px) {

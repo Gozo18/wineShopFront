@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from 'next/image';
 import { useStateContext } from "../lib/context";
 import { useEffect, useState } from "react";
-import { BsPlusSquare, BsDashSquare } from "react-icons/bs";
+import { BsPlusSquare, BsDashSquare, BsBoxSeam, } from "react-icons/bs";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "../styles/Products.module.scss";
@@ -31,7 +31,7 @@ export default function Product({ product }) {
     resetQuantity();
   }, []);
 
-  const { name, price, image, slug, year, sweetness, attribute } =
+  const { name, price, price6Pack, price18Pack, price30Pack, image, slug, year, sweetness, attribute } =
     product.attributes;
 
   return (
@@ -55,7 +55,10 @@ export default function Product({ product }) {
               <h3>{attribute}</h3>
             </a>
           </Link>
-          <h3 className={styles.price}>{price},- Kč</h3>
+          <h3 className={styles.price}>{price},-</h3>
+          <p className={styles.pricePack}><BsBoxSeam /> {price6Pack},-</p>
+          <p className={styles.pricePack}><BsBoxSeam /><BsBoxSeam /><BsBoxSeam /> {price18Pack},-</p>
+          <p className={styles.pricePack}><BsBoxSeam /><BsBoxSeam /><BsBoxSeam /><BsBoxSeam /><BsBoxSeam /> {price30Pack},-</p>
           <div className={styles.quantityBox}>
             <div onClick={decreaseQty}>
               <BsDashSquare />

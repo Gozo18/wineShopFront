@@ -18,11 +18,32 @@ function objednavka() {
     if(item.attribute != null) {
       name += " " + item.attribute;
     }
-    const addItem = {
-      productname: name,
-      productquantity: item.quantity,
-      productprice: item.price,
-    };
+    let addItem = {};
+    if (item.quantity < 6) {
+      addItem = {
+        productname: name,
+        productquantity: item.quantity,
+        productprice: item.price,
+      };
+    } else if (item.quantity > 5 && item.quantity < 18) {
+      addItem = {
+        productname: name,
+        productquantity: item.quantity,
+        productprice: item.price6Pack,
+      };
+    } else if (item.quantity > 17 && item.quantity < 30) {
+      addItem = {
+        productname: name,
+        productquantity: item.quantity,
+        productprice: item.price18Pack,
+      };
+    } else if (item.quantity > 29) {
+      addItem = {
+        productname: name,
+        productquantity: item.quantity,
+        productprice: item.price30Pack,
+      };
+    }
     orderedItems.push(addItem);
   });
 

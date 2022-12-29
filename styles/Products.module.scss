@@ -37,6 +37,15 @@
   text-align: center;
 }
 
+.pricePack {
+  text-align: center;
+  font-size: 0.9rem !important;
+
+  @media (max-width: 991px) {
+    font-size: 0.7rem !important;
+  }
+}
+
 .quantityBox {
   display: flex;
   justify-content: center;

@@ -2,15 +2,40 @@ import Image from 'next/image';
 import { FaShoppingCart } from "react-icons/fa";
 import { BsPlusSquare, BsDashSquare, BsXSquare } from "react-icons/bs";
 import Link from "next/link";
-//Import State
+import { useEffect } from "react";
 import { useStateContext } from "../lib/context";
 import { motion } from "framer-motion";
 
 import styles from "../styles/Cart.module.scss";
 
 export default function Cart() {
-  const { cartItems, setShowCart, onAdd, onRemove, totalPrice } =
+  const { cartItems, setShowCart, onAdd, onRemove, totalPrice, setTotalPrice } =
     useStateContext();
+
+    useEffect(() => {
+      console.log(cartItems);
+      setTotalPrice(0);
+      cartItems.map((item) => {
+        if (item.quantity < 6) {
+          setTotalPrice(
+            (prevTotalPrice) => prevTotalPrice + item.price * item.quantity
+          );
+        } else if (item.quantity > 5 && item.quantity < 18) {
+          setTotalPrice(
+            (prevTotalPrice) => prevTotalPrice + item.price6Pack * item.quantity
+          );
+        } else if (item.quantity > 17 && item.quantity < 30) {
+          setTotalPrice(
+            (prevTotalPrice) => prevTotalPrice + item.price18Pack * item.quantity
+          );
+        } else if (item.quantity > 29) {
+          setTotalPrice(
+            (prevTotalPrice) => prevTotalPrice + item.price30Pack * item.quantity
+          );
+        }
+      });
+    }, [onAdd]);
+
 
   return (
     <motion.div
@@ -74,8 +99,27 @@ export default function Cart() {
                       <p>
                         {item.sweetness}
                       </p>
-                      {/* <p>{item.sweetness}</p> */}
-                      <h3>{item.price},- Kč</h3>
+                      {(item.quantity < 6) && (
+                        <h3>{item.price},- Kč</h3>
+                      )}
+                      {(item.quantity > 5 && item.quantity < 18) && (
+                        <>
+                          <p><del>{item.price},- Kč</del></p>
+                          <h3>{item.price6Pack},- Kč</h3>
+                        </>
+                      )}
+                      {(item.quantity > 17 && item.quantity < 30) && (
+                        <>
+                        <p><del>{item.price},- Kč</del></p>
+                        <h3>{item.price18Pack},- Kč</h3>
+                      </>
+                      )}
+                      {(item.quantity > 29) && (
+                        <>
+                        <p><del>{item.price},- Kč</del></p>
+                        <h3>{item.price30Pack},- Kč</h3>
+                      </>
+                      )}
                       <div className={styles.quantityBox}>
                         <div onClick={() => onRemove(item)}>
                           <BsDashSquare />

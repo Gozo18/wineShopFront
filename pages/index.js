@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useQuery } from "urql";
 import { PRODUCT_QUERY } from "../lib/query";
 import Product from "../components/Product";
+import Header from "../components/Header";
 import Link from "next/link";
 import { useRouter } from 'next/router';
 import { useStateContext } from "../lib/context";
@@ -59,11 +60,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1 className={styles.mainHeader}>Vinařství Iris</h1>
-        <p className={styles.mainPar}>
-          Rodinné vinařství Zdeňka Šilinka se nachází pod Pálavou v malebné vinařské obci Pavlov, kde má vinařství mnoha set letou tradici. V minulém století ještě platilo, že ke každému domku patří sklep a ke sklepu vinohrad.
-          Vína vyrábíme klasickými postupy s přihlédnutím k novým výrobním trendům.
-        </p>
+        <Header />
         <h2 className={styles.wineHeader}>Naše vína</h2>
         <div className={styles.filterBox}>
           <Link href='/bila-vina'> 

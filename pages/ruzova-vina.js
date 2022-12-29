@@ -2,10 +2,11 @@ import Head from "next/head";
 import { useQuery } from "urql";
 import { GET_COLOR_PRODUCT_QUERY } from "../lib/query";
 import Product from "../components/Product";
+import Header from "../components/Header";
 import Link from "next/link";
 import styles from "../styles/Home.module.scss";
 
-function ruzovaVina() {
+export default function ruzovaVina() {
     const [results] = useQuery({
         query: GET_COLOR_PRODUCT_QUERY,
         variables: { color: "růžové" },
@@ -48,11 +49,7 @@ function ruzovaVina() {
       </Head>
 
       <main>
-        <h1 className={styles.mainHeader}>Vinařství Iris</h1>
-        <p className={styles.mainPar}>
-          Rodinné vinařství Zdeňka Šilinka se nachází pod Pálavou v malebné vinařské obci Pavlov, kde má vinařství mnoha set letou tradici. V minulém století ještě platilo, že ke každému domku patří sklep a ke sklepu vinohrad.
-          Vína vyrábíme klasickými postupy z přihlédnutím k novým výrobním trendům.
-        </p>
+        <Header />
         <h2 className={styles.wineHeader}>Naše růžová vína</h2>
         <div  className={styles.filterBox}>
             <Link href='/'>
@@ -80,5 +77,3 @@ function ruzovaVina() {
     </div>
   )
 }
-
-export default ruzovaVina
