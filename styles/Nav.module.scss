@@ -88,10 +88,11 @@
   h3 {
     margin: 0;
     padding: 0.25rem;
-    font-size: 0.9rem !important;
+    font-size: 1.4rem !important;
+    font-family: 'Caveat', cursive !important;
 
     @media (max-width: 991px) {
-      font-size: 0.7rem !important;
+      font-size: 1rem !important;
     }
   }
 
