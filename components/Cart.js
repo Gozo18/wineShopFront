@@ -9,26 +9,25 @@ import { motion } from "framer-motion";
 import styles from "../styles/Cart.module.scss";
 
 export default function Cart() {
-  const { cartItems, setShowCart, onAdd, onRemove, totalPrice, setTotalPrice } =
+  const { cartItems, setShowCart, onAdd, onRemove, totalPrice, setTotalPrice, totalQuantities } =
     useStateContext();
 
     useEffect(() => {
-      console.log(cartItems);
       setTotalPrice(0);
       cartItems.map((item) => {
-        if (item.quantity < 6) {
+        if (totalQuantities < 6) {
           setTotalPrice(
             (prevTotalPrice) => prevTotalPrice + item.price * item.quantity
           );
-        } else if (item.quantity > 5 && item.quantity < 18) {
+        } else if (totalQuantities > 5 && item.quantity < 18) {
           setTotalPrice(
             (prevTotalPrice) => prevTotalPrice + item.price6Pack * item.quantity
           );
-        } else if (item.quantity > 17 && item.quantity < 30) {
+        } else if (totalQuantities > 17 && item.quantity < 30) {
           setTotalPrice(
             (prevTotalPrice) => prevTotalPrice + item.price18Pack * item.quantity
           );
-        } else if (item.quantity > 29) {
+        } else if (totalQuantities > 29) {
           setTotalPrice(
             (prevTotalPrice) => prevTotalPrice + item.price30Pack * item.quantity
           );
