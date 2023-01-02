@@ -11,7 +11,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "../styles/Checkout.module.scss";
 
 function kosik() {
-  const { cartItems, totalPrice, setOrderInfo, setNotOrderSended } =
+  const { cartItems, totalPrice, setOrderInfo, setNotOrderSended, totalQuantities } =
     useStateContext();
 
   const router = useRouter();
@@ -122,22 +122,22 @@ function kosik() {
                         {item.sweetness}
                       </h3>
                       <p>Kusů: {item.quantity}</p>
-                      {(item.quantity < 6) && (
+                      {(totalQuantities < 6) && (
                         <p>Cena: {item.price},- Kč</p>
                       )}
-                      {(item.quantity > 5 && item.quantity < 18) && (
+                      {(totalQuantities > 5 && totalQuantities < 18) && (
                         <>
                           <p><del>Cena: {item.price},- Kč</del></p>
                           <p>Cena: {item.price6Pack},- Kč</p>
                         </>
                       )}
-                      {(item.quantity > 17 && item.quantity < 30) && (
+                      {(totalQuantities > 17 && totalQuantities < 30) && (
                         <>
                         <p><del>Cena: {item.price},- Kč</del></p>
                         <p>Cena: {item.price18Pack},- Kč</p>
                       </>
                       )}
-                      {(item.quantity > 29) && (
+                      {(totalQuantities > 29) && (
                         <>
                         <p><del>Cena: {item.price},- Kč</del></p>
                         <p>Cena: {item.price30Pack},- Kč</p>
