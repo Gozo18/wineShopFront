@@ -98,22 +98,22 @@ export default function Cart() {
                       <p>
                         {item.sweetness}
                       </p>
-                      {(item.quantity < 6) && (
+                      {(totalQuantities < 6) && (
                         <h3>{item.price},- Kč</h3>
                       )}
-                      {(item.quantity > 5 && item.quantity < 18) && (
+                      {(totalQuantities > 5 && totalQuantities < 18) && (
                         <>
                           <p><del>{item.price},- Kč</del></p>
                           <h3>{item.price6Pack},- Kč</h3>
                         </>
                       )}
-                      {(item.quantity > 17 && item.quantity < 30) && (
+                      {(totalQuantities > 17 && totalQuantities < 30) && (
                         <>
                         <p><del>{item.price},- Kč</del></p>
                         <h3>{item.price18Pack},- Kč</h3>
                       </>
                       )}
-                      {(item.quantity > 29) && (
+                      {(totalQuantities > 29) && (
                         <>
                         <p><del>{item.price},- Kč</del></p>
                         <h3>{item.price30Pack},- Kč</h3>
