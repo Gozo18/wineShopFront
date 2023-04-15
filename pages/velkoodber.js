@@ -75,7 +75,9 @@ function velkoodber() {
         <div className="col-12" id={styles.velkoBox}>
           <h1>Velkoodběr</h1>
           <p className={styles.mainPar}>
-            Pro nabídku sudových vín nás kontaktujte. Tel:<a href="tel:+420602528545">+420 602 528 545</a></p> Email:<a href="mailto:info@irispavlov.cz">info@irispavlov.cz</a></p>
+            Pro nabídku sudových vín nás kontaktujte. Tel:
+            <a href="tel:+420602528545">+420 602 528 545</a> Email:
+            <a href="mailto:info@irispavlov.cz">info@irispavlov.cz</a>
           </p>
 
           <table className="table table-striped">
