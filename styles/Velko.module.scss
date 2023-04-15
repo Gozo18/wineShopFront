@@ -1,45 +1,64 @@
 .backLink {
-    color: #2d2d2d;
-    text-decoration: none;
-    cursor: pointer;
+  color: #2d2d2d;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mainPar {
+  margin-bottom: 2rem !important;
+
+  @media (max-width: 991px) {
+    margin-bottom: 1rem !important;
+  }
 }
 
 #velkoBox {
-    h1, p {
-        text-align: center;
+  h1,
+  p {
+    text-align: center;
+  }
+
+  h1 {
+    margin-bottom: 2rem;
+
+    @media (max-width: 991px) {
+      margin-bottom: 1rem;
+      font-size: 1.2rem !important;
     }
+  }
 
-    h1 {
-        margin-bottom: 2rem;
+  table {
+    width: 100%;
 
-        @media (max-width: 991px) {
-            margin-bottom: 1rem;
-            font-size: 1.2rem !important;
-        }
+    @media (max-width: 991px) {
+      font-size: 0.8rem !important;
+
+      tr {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      th,
+      td {
+        border-bottom: 0;
+      }
+
+      th:first-child,
+      td:first-child {
+        width: 100% !important;
+      }
+
+      th:nth-child(2),
+      th:nth-child(3),
+      th:nth-child(4),
+      th:nth-child(5),
+      td:nth-child(2),
+      td:nth-child(3),
+      td:nth-child(4),
+      ,
+      td:nth-child(5) {
+        width: 25% !important;
+      }
     }
-
-    table {
-        width: 100%;
-
-        @media (max-width: 991px) {
-            font-size: 0.8rem !important;
-
-            tr {
-                display: flex;
-                flex-wrap: wrap;
-            }
-
-            th, td {
-                border-bottom: 0;
-            }
-
-            th:first-child, td:first-child {
-                width: 100% !important;
-            }
-
-            th:nth-child(2), th:nth-child(3), th:nth-child(4), th:nth-child(5), td:nth-child(2), td:nth-child(3), td:nth-child(4), , td:nth-child(5) {
-                width: 25% !important;
-            }
-        }
-    }
+  }
 }
