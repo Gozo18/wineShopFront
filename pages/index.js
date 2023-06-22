@@ -64,7 +64,7 @@ export default function Home() {
           <meta name="title" content="Vinařství Iris" />
           <meta
             name="description"
-            content="Vinařství Iris Pavlov - rodinné vinařství z Pavlova"
+            content="Vinařství Iris Pavlov - rodinné vinařství z Pavlova, vinařství Šilinek, víno Pavlov, Pálava"
           />
 
           <meta property="og:title" content="Vinařství Iris" />
