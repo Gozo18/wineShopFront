@@ -1,0 +1,68 @@
+.slider {
+  margin-bottom: 4rem !important;
+
+  a {
+    color: #2d2d2d;
+    text-decoration: none;
+  }
+}
+
+.wineHeader {
+  margin-bottom: 2rem;
+  text-align: center;
+
+  @media (max-width: 991px) {
+    margin-bottom: 1rem;
+  }
+}
+
+.imageBox {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+  width: 100%;
+  height: 20rem;
+
+  @media (max-width: 991px) {
+    height: 15rem;
+  }
+
+  @media (max-width: 499px) {
+    height: 12rem;
+  }
+
+  @media (max-width: 399px) {
+    height: 10rem;
+  }
+
+  img {
+    position: relative !important;
+    object-fit: contain;
+  }
+}
+
+.textBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h3 {
+    font-size: 1rem;
+    text-align: center;
+
+    @media (max-width: 991px) {
+      font-size: 0.8rem;
+    }
+  }
+
+  h4 {
+    font-size: 0.8rem;
+    text-align: center;
+
+    @media (max-width: 991px) {
+      font-size: 0.6rem;
+    }
+  }
+}

@@ -6,6 +6,7 @@ import Header from "../components/Header"
 import Link from "next/link"
 import { useRouter } from "next/router"
 import { useStateContext } from "../lib/context"
+import WineSlider from "../components/WineSlider"
 import styles from "../styles/Home.module.scss"
 
 export default function Home() {
@@ -82,6 +83,7 @@ export default function Home() {
 
         <main>
           <Header />
+          <WineSlider products={products} />
           <h2 className={styles.wineHeader}>Naše vína</h2>
           <div className={styles.filterBox}>
             <Link href="/bila-vina">
