@@ -166,6 +166,11 @@ textarea {
   }
 }
 
+.slick-slide {
+  scale: 1;
+  transition: scale 0.5s;
+}
+
 .slick-center {
   height: 6rem !important;
   scale: 1.5;
