@@ -35,8 +35,6 @@ function WineSlider(products) {
 
   const promoWines = wines.filter(checkPromo)
 
-  console.log(promoWines)
-
   return (
     <div className={styles.slider}>
       <h2 className={styles.wineHeader}>Top nabídka</h2>
@@ -48,9 +46,10 @@ function WineSlider(products) {
                 <div className={styles.imageBox}>
                   <Image
                     src={
-                      product.attributes.image.data.attributes.formats.small.url
+                      product.attributes.image.data.attributes.formats.medium
+                        .url
                     }
-                    alt={name}
+                    alt={product.attributes.name}
                     layout="fill"
                   />
                 </div>
