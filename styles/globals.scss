@@ -176,18 +176,28 @@ textarea {
   scale: 1.5;
 
   h3 {
+    font-size: 1rem !important;
+
+    @media (max-width: 991px) {
+      font-size: 0.8rem !important;
+    }
+  }
+
+  h4 {
     font-size: 0.8rem !important;
 
     @media (max-width: 991px) {
       font-size: 0.6rem !important;
     }
   }
+}
 
-  h4 {
-    font-size: 0.6rem !important;
+.col-6 {
+  @media (max-width: 991px) {
+    padding: 0 10px !important;
+  }
 
-    @media (max-width: 991px) {
-      font-size: 0.4rem !important;
-    }
+  .card-body {
+    padding: 10px;
   }
 }
