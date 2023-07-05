@@ -108,7 +108,7 @@ export default function Home() {
               <div className="modal-dialog">
                 <div className="modal-content">
                   <div className="modal-header">
-                    <h5 className="modal-title">Vinařství Iris</h5>
+                    <p className="modal-title">Vinařství Iris</p>
                     <button
                       type="button"
                       className="btn-close"
