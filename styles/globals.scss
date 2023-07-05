@@ -223,6 +223,28 @@ textarea {
   }
 }
 
+#__next {
+  .slick-dots {
+    @media (max-width: 991px) {
+      bottom: -45px;
+
+      li {
+        width: 30px;
+        height: 30px;
+
+        button {
+          width: 30px;
+          height: 30px;
+
+          &:before {
+            font-size: 9px;
+          }
+        }
+      }
+    }
+  }
+}
+
 .col-6 {
   @media (max-width: 991px) {
     padding: 0 5px !important;
