@@ -113,6 +113,7 @@ export default function Home() {
                       type="button"
                       className="btn-close"
                       onClick={closeModal}
+                      aria-label="Close button"
                     ></button>
                   </div>
                   <div className="modal-body">
@@ -126,6 +127,7 @@ export default function Home() {
                       type="button"
                       className="btn btn-secondary"
                       onClick={closeModal}
+                      aria-label="Close button"
                     >
                       Zavřít
                     </button>
