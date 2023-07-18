@@ -111,28 +111,53 @@ export default function ProductDetails() {
           content={`${image.data.attributes.formats.medium.url}`}
         />
         <meta property="og:url" content="https://irispavlov.cz" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Product",
-              aggregateRating: {
-                "@type": "AggregateRating",
-                ratingValue: "5",
-                reviewCount: "15",
-              },
-              description: `${name} ${year} ${attribute} - Vinařství Iris Pavlov - rodinné vinařství z Pavlova`,
-              name: `${name} ${year} ${attribute} - Vinařství Iris Pavlov`,
-              image: `${image.data.attributes.formats.medium.url}`,
-              offers: {
-                "@type": "Offer",
-                price: `${price}`,
-                priceCurrency: "CZK",
-              },
-            }),
-          }}
-        />
+        {attribute === null ? (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Product",
+                aggregateRating: {
+                  "@type": "AggregateRating",
+                  ratingValue: "5",
+                  reviewCount: "15",
+                },
+                description: `${name} ${year} - Vinařství Iris Pavlov - rodinné vinařství z Pavlova`,
+                name: `${name} ${year} - Vinařství Iris Pavlov`,
+                image: `${image.data.attributes.formats.medium.url}`,
+                offers: {
+                  "@type": "Offer",
+                  price: `${price}`,
+                  priceCurrency: "CZK",
+                },
+              }),
+            }}
+          />
+        ) : (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Product",
+                aggregateRating: {
+                  "@type": "AggregateRating",
+                  ratingValue: "5",
+                  reviewCount: "15",
+                },
+                description: `${name} ${year} ${attribute} - Vinařství Iris Pavlov - rodinné vinařství z Pavlova`,
+                name: `${name} ${year} ${attribute} - Vinařství Iris Pavlov`,
+                image: `${image.data.attributes.formats.medium.url}`,
+                offers: {
+                  "@type": "Offer",
+                  price: `${price}`,
+                  priceCurrency: "CZK",
+                },
+              }),
+            }}
+          />
+        )}
       </Head>
 
       <div className="row" itemScope itemType="https://schema.org/Product">

@@ -51,7 +51,7 @@ function kontakty() {
               sameAs: "http://www.vinarstviiris.cz",
               email: "info@vinarstviiris.cz",
               image:
-                "http://localhost:3000/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdgxiw0ujm%2Fimage%2Fupload%2Fv1681570595%2Flarge_pa21_polosladke_c93aed8add.png&w=1920&q=75",
+                "https://www.vinarstviiris.cz/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdgxiw0ujm%2Fimage%2Fupload%2Fv1681570595%2Flarge_pa21_polosladke_c93aed8add.png&w=1920&q=75",
             }),
           }}
         />
