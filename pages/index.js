@@ -79,6 +79,35 @@ export default function Home() {
             content="https://wine-shop-front.vercel.app/bottlePal.png"
           />
           <meta property="og:url" content="https://irispavlov.cz" />
+
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": ["Winery", "TouristAttraction"],
+                name: "Vinařství Iris",
+                description:
+                  "Rodinné vinařství Zdeňka Šilinka se nachází pod Pálavou ve vinařské obci Pavlov.",
+                address: {
+                  "@type": "PostalAddress",
+                  addressLocality: "Pavlov",
+                  addressCountry: "CZ",
+                  postalCode: "69201",
+                  streetAddress: "Podhradní 180",
+                },
+                publicAccess: true,
+                availableLanguage: ["Czech"],
+                openingHours: ["Po-Su 9:00-19:00"],
+                touristType: ["Wine tourism"],
+                telephone: ["+420602528545"],
+                sameAs: "http://www.vinarstviiris.cz",
+                email: "info@vinarstviiris.cz",
+                image:
+                  "http://localhost:3000/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdgxiw0ujm%2Fimage%2Fupload%2Fv1681570595%2Flarge_pa21_polosladke_c93aed8add.png&w=1920&q=75",
+              }),
+            }}
+          />
         </Head>
 
         <main>
