@@ -1,2 +1,7 @@
 User-agent: *
-Disallow:
+Disallow: /404
+Disallow: /admin
+Disallow: /kosik
+Disallow: /objednavka
+
+Sitemap: https://www.vinarstviiris.cz/sitemap.xml
