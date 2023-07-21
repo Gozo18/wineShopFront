@@ -1,6 +1,6 @@
 const EXTERNAL_DATA_URL =
-  "https://strapi-production-16e2.up.railway.app/api/products"
-const PAGE_URL = "https://www.vinarstviiris.cz/produkt/"
+  "https://strapi-production-16e2.up.railway.app/api/products?pagination[limit]=100"
+const PAGE_URL = "https://www.vinarstviiris.cz/produkt"
 const URL = "https://www.vinarstviiris.cz/"
 
 function generateSiteMap(products) {
@@ -45,9 +45,11 @@ export async function getServerSideProps({ res }) {
   // We make an API call to gather the URLs for our site
   const request = await fetch(EXTERNAL_DATA_URL)
   const result = await request.json()
+  console.log(result.data.length)
 
   if (result) {
     const products = result.data
+    console.log(products.length)
 
     // We generate the XML sitemap with the posts data
     const sitemap = generateSiteMap(products)
