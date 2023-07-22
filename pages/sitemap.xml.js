@@ -1,7 +1,7 @@
 const EXTERNAL_DATA_URL =
   "https://strapi-production-16e2.up.railway.app/api/products?pagination[limit]=100"
 const PAGE_URL = "https://www.vinarstviiris.cz/produkt"
-const URL = "https://www.vinarstviiris.cz/"
+const URL = "https://www.vinarstviiris.cz"
 
 function generateSiteMap(products) {
   return `<?xml version="1.0" encoding="UTF-8"?>
