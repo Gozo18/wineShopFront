@@ -156,7 +156,7 @@ export default function Home() {
                       type="button"
                       className="btn btn-secondary"
                       onClick={closeModal}
-                      aria-label="Close button"
+                      aria-label="Zavřít"
                     >
                       Zavřít
                     </button>
