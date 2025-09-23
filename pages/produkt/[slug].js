@@ -38,24 +38,24 @@ export default function ProductDetails() {
     return (
       <div>
         <Head>
-          <title>Vinařství Iris</title>
-          <meta name="title" content="Vinařství Iris" />
+          <title>Víno Iris</title>
+          <meta name="title" content="Víno Iris" />
           <meta
             name="description"
-            content="Vinařství Iris Pavlov - rodinné vinařství z Pavlova"
+            content="Víno Iris Pavlov - rodinné vinařství z Pavlova"
           />
 
-          <meta property="og:title" content="Vinařství Iris" />
+          <meta property="og:title" content="Víno Iris" />
           <meta property="og:type" content="website" />
           <meta
             property="og:description"
-            content="Vinařství Iris Pavlov - rodinné vinařství z Pavlova."
+            content="Víno Iris Pavlov - rodinné vinařství z Pavlova."
           />
           <meta
             property="og:image"
             content="https://wine-shop-front.vercel.app/bottlePal.png"
           />
-          <meta property="og:url" content="https://irispavlov.cz" />
+          <meta property="og:url" content="https://vinoiris.cz" />
         </Head>
         <div className="loadingBox">
           <div className="loader"></div>
@@ -86,31 +86,31 @@ export default function ProductDetails() {
     <div>
       <Head>
         <title>
-          {name} {year} {attribute} - Vinařství Iris
+          {name} {year} {attribute} - Víno Iris
         </title>
         <meta
           name="title"
-          content={`${name} ${year} ${attribute} - Vinařství Iris`}
+          content={`${name} ${year} ${attribute} - Víno Iris`}
         />
         <meta
           name="description"
-          content={`${name} ${year} ${attribute} - Vinařství Iris Pavlov - rodinné vinařství z Pavlova`}
+          content={`${name} ${year} ${attribute} - Víno Iris Pavlov - rodinné vinařství z Pavlova`}
         />
 
         <meta
           property="og:title"
-          content={`${name} ${year} ${attribute} - Vinařství Iris Pavlov`}
+          content={`${name} ${year} ${attribute} - Víno Iris Pavlov`}
         />
         <meta property="og:type" content="website" />
         <meta
           property="og:description"
-          content={`${name} ${year} ${attribute} - Vinařství Iris Pavlov - rodinné vinařství z Pavlova`}
+          content={`${name} ${year} ${attribute} - Víno Pavlov - rodinné vinařství z Pavlova`}
         />
         <meta
           property="og:image"
           content={`${image.data.attributes.formats.medium.url}`}
         />
-        <meta property="og:url" content="https://irispavlov.cz" />
+        <meta property="og:url" content="https://vinoiris.cz" />
         {attribute === null ? (
           <script
             type="application/ld+json"
@@ -123,8 +123,8 @@ export default function ProductDetails() {
                   ratingValue: "5",
                   reviewCount: "15",
                 },
-                description: `${name} ${year} - Vinařství Iris Pavlov - rodinné vinařství z Pavlova`,
-                name: `${name} ${year} - Vinařství Iris Pavlov`,
+                description: `${name} ${year} - Víno Iris Pavlov - rodinné vinařství z Pavlova`,
+                name: `${name} ${year} - Víno Iris Pavlov`,
                 image: `${image.data.attributes.formats.medium.url}`,
                 offers: {
                   "@type": "Offer",
@@ -146,8 +146,8 @@ export default function ProductDetails() {
                   ratingValue: "5",
                   reviewCount: "15",
                 },
-                description: `${name} ${year} ${attribute} - Vinařství Iris Pavlov - rodinné vinařství z Pavlova`,
-                name: `${name} ${year} ${attribute} - Vinařství Iris Pavlov`,
+                description: `${name} ${year} ${attribute} - Víno Iris Pavlov - rodinné vinařství z Pavlova`,
+                name: `${name} ${year} ${attribute} - Víno Iris Pavlov`,
                 image: `${image.data.attributes.formats.medium.url}`,
                 offers: {
                   "@type": "Offer",

@@ -17,18 +17,18 @@ export default function bilaVina() {
     return (
       <div>
         <Head>
-          <title>Bílá vína - Vinařství Iris</title>
-          <meta name="title" content="Bílá vína - Vinařství Iris" />
+          <title>Bílá vína - Víno Iris</title>
+          <meta name="title" content="Bílá vína - Víno Iris" />
           <meta
             name="description"
-            content="Vinařství Iris Pavlov - rodinné vinařství z Pavlova"
+            content="Víno Iris Pavlov - rodinné vinařství z Pavlova"
           />
 
-          <meta property="og:title" content="Vinařství Iris - bílá vína" />
+          <meta property="og:title" content="Víno Iris - bílá vína" />
           <meta property="og:type" content="website" />
           <meta
             property="og:description"
-            content="Vinařství Iris Pavlov - rodinné vinařství z Pavlova."
+            content="Víno Iris Pavlov - rodinné vinařství z Pavlova."
           />
           <meta
             property="og:image"
@@ -41,7 +41,7 @@ export default function bilaVina() {
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": ["Winery", "TouristAttraction"],
-                name: "Vinařství Iris",
+                name: "Víno Iris",
                 description:
                   "Rodinné vinařství Zdeňka Šilinka se nachází pod Pálavou ve vinařské obci Pavlov. Bílá vína.",
                 address: {
@@ -56,8 +56,8 @@ export default function bilaVina() {
                 openingHours: ["Po-Su 9:00-19:00"],
                 touristType: ["Wine tourism"],
                 telephone: ["+420602528545"],
-                sameAs: "http://www.vinarstviiris.cz/bila-vina",
-                email: "info@vinarstviiris.cz",
+                sameAs: "http://www.vinoiris.cz/bila-vina",
+                email: "info@vinoiris.cz",
                 image:
                   "https://www.vinarstviiris.cz/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdgxiw0ujm%2Fimage%2Fupload%2Fv1681570595%2Flarge_pa21_polosladke_c93aed8add.png&w=1920&q=75",
               }),
@@ -75,24 +75,24 @@ export default function bilaVina() {
   return (
     <div>
       <Head>
-        <title>Bílá vína - Vinařství Iris</title>
-        <meta name="title" content="Bílá vína - Vinařství Iris" />
+        <title>Bílá vína - Víno Iris</title>
+        <meta name="title" content="Bílá vína - Víno Iris" />
         <meta
           name="description"
-          content="Vinařství Iris Pavlov - rodinné vinařství z Pavlova"
+          content="Víno Iris Pavlov - rodinné vinařství z Pavlova"
         />
 
-        <meta property="og:title" content="Vinařství Iris - bílá vína" />
+        <meta property="og:title" content="Víno Iris - bílá vína" />
         <meta property="og:type" content="website" />
         <meta
           property="og:description"
-          content="Vinařství Iris Pavlov - rodinné vinařství z Pavlova."
+          content="Víno Iris Pavlov - rodinné vinařství z Pavlova."
         />
         <meta
           property="og:image"
           content="https://wine-shop-front.vercel.app/bottlePal.png"
         />
-        <meta property="og:url" content="https://irispavlov.cz/bila-vina" />
+        <meta property="og:url" content="https://vinoiris.cz/bila-vina" />
       </Head>
 
       <main>

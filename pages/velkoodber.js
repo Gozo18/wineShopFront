@@ -16,24 +16,24 @@ function velkoodber() {
     return (
       <div>
         <Head>
-          <title>Velkoodběr - Vinařství Iris</title>
-          <meta name="title" content="Velkoodběr - Vinařství Iris" />
+          <title>Velkoodběr - Víno Iris</title>
+          <meta name="title" content="Velkoodběr - Víno Iris" />
           <meta
             name="description"
-            content="Vinařství Iris Pavlov - rodinné vinařství z Pavlova"
+            content="Víno Iris Pavlov - rodinné vinařství z Pavlova"
           />
 
-          <meta property="og:title" content="Vinařství Iris" />
+          <meta property="og:title" content="Víno Iris" />
           <meta property="og:type" content="website" />
           <meta
             property="og:description"
-            content="Vinařství Iris Pavlov - rodinné vinařství z Pavlova."
+            content="Víno Iris Pavlov - rodinné vinařství z Pavlova."
           />
           <meta
             property="og:image"
             content="https://wine-shop-front.vercel.app/bottlePal.png"
           />
-          <meta property="og:url" content="https://irispavlov.cz" />
+          <meta property="og:url" content="https://vinoiris.cz" />
         </Head>
         <div className="loadingBox">
           <div className="loader"></div>
@@ -46,17 +46,17 @@ function velkoodber() {
   return (
     <div>
       <Head>
-        <title>Velkoodběr - Vinařství Iris</title>
-        <meta name="title" content="Velkoodběr - Vinařství Iris" />
+        <title>Velkoodběr - Víno Iris</title>
+        <meta name="title" content="Velkoodběr - Víno Iris" />
         <meta
           name="description"
-          content="Kontakty Vinařství Iris Pavlov - rodinné vinařství z Pavlova"
+          content="Kontakty Víno Iris Pavlov - rodinné vinařství z Pavlova"
         />
-        <meta property="og:title" content="Kontakty - Vinařství Iris" />
+        <meta property="og:title" content="Kontakty - Víno Iris" />
         <meta property="og:type" content="website" />
         <meta
           property="og:description"
-          content="Vinařství Iris Pavlov - rodinné vinařství z Pavlova."
+          content="Víno Iris Pavlov - rodinné vinařství z Pavlova."
         />
         <meta
           property="og:image"
@@ -69,7 +69,7 @@ function velkoodber() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": ["Winery", "TouristAttraction"],
-              name: "Vinařství Iris",
+              name: "Víno Iris",
               description:
                 "Rodinné vinařství Zdeňka Šilinka se nachází pod Pálavou ve vinařské obci Pavlov.",
               address: {
@@ -84,10 +84,10 @@ function velkoodber() {
               openingHours: ["Po-Su 9:00-19:00"],
               touristType: ["Wine tourism"],
               telephone: ["+420602528545"],
-              sameAs: "http://www.vinarstviiris.cz",
-              email: "info@vinarstviiris.cz",
+              sameAs: "http://www.vinoiris.cz",
+              email: "info@vinoiris.cz",
               image:
-                "https://www.vinarstviiris.cz/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdgxiw0ujm%2Fimage%2Fupload%2Fv1681570595%2Flarge_pa21_polosladke_c93aed8add.png&w=1920&q=75",
+                "https://www.vinoiris.cz/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdgxiw0ujm%2Fimage%2Fupload%2Fv1681570595%2Flarge_pa21_polosladke_c93aed8add.png&w=1920&q=75",
             }),
           }}
         />

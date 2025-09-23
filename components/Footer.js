@@ -1,16 +1,18 @@
-import Link from "next/link";
-import styles from "../styles/Footer.module.scss";
+import Link from "next/link"
+import styles from "../styles/Footer.module.scss"
 
 function Footer() {
   return (
     <div className={styles.footerBox}>
-        <div>Vinařství Iris s.r.o.</div>
-        <div>
-            <Link href='https://vilapavlov.cz'>
-                ubytování vila Pavlov - vilapavlov.cz
-            </Link>
-        </div>
-        <div>©2023 <Link href='/'>vinarstviiris.cz</Link></div>
+      <div>Víno Iris s.r.o.</div>
+      <div>
+        <Link href="https://vilapavlov.cz">
+          ubytování vila Pavlov - vilapavlov.cz
+        </Link>
+      </div>
+      <div>
+        ©2025 <Link href="/">vinoiris.cz</Link>
+      </div>
     </div>
   )
 }

@@ -17,27 +17,24 @@ export default function cervenaVina() {
     return (
       <div>
         <Head>
-          <title>Červená vína - Vinařství Iris</title>
-          <meta name="title" content="Červená vína - Vinařství Iris" />
+          <title>Červená vína - Víno Iris</title>
+          <meta name="title" content="Červená vína - Víno Iris" />
           <meta
             name="description"
-            content="Vinařství Iris Pavlov - rodinné vinařství z Pavlova"
+            content="Víno Iris Pavlov - rodinné vinařství z Pavlova"
           />
 
-          <meta property="og:title" content="Vinařství Iris - červená vína" />
+          <meta property="og:title" content="Víno Iris - červená vína" />
           <meta property="og:type" content="website" />
           <meta
             property="og:description"
-            content="Vinařství Iris Pavlov - rodinné vinařství z Pavlova."
+            content="Víno Iris Pavlov - rodinné vinařství z Pavlova."
           />
           <meta
             property="og:image"
             content="https://wine-shop-front.vercel.app/bottlePal.png"
           />
-          <meta
-            property="og:url"
-            content="https://irispavlov.cz/cervena-vina"
-          />
+          <meta property="og:url" content="https://vinoiris.cz/cervena-vina" />
 
           <script
             type="application/ld+json"
@@ -45,7 +42,7 @@ export default function cervenaVina() {
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": ["Winery", "TouristAttraction"],
-                name: "Vinařství Iris",
+                name: "Víno Iris",
                 description:
                   "Rodinné vinařství Zdeňka Šilinka se nachází pod Pálavou ve vinařské obci Pavlov. Červená vína.",
                 address: {
@@ -60,10 +57,10 @@ export default function cervenaVina() {
                 openingHours: ["Po-Su 9:00-19:00"],
                 touristType: ["Wine tourism"],
                 telephone: ["+420602528545"],
-                sameAs: "http://www.vinarstviiris.cz/cervena-vina",
-                email: "info@vinarstviiris.cz",
+                sameAs: "http://www.vinoiris.cz/cervena-vina",
+                email: "info@vinoiris.cz",
                 image:
-                  "https://www.vinarstviiris.cz/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdgxiw0ujm%2Fimage%2Fupload%2Fv1681570595%2Flarge_pa21_polosladke_c93aed8add.png&w=1920&q=75",
+                  "https://www.vinoiris.cz/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdgxiw0ujm%2Fimage%2Fupload%2Fv1681570595%2Flarge_pa21_polosladke_c93aed8add.png&w=1920&q=75",
               }),
             }}
           />
@@ -79,24 +76,24 @@ export default function cervenaVina() {
   return (
     <div>
       <Head>
-        <title>Červená vína - Vinařství Iris</title>
-        <meta name="title" content="Červená vína - Vinařství Iris" />
+        <title>Červená vína - Víno Iris</title>
+        <meta name="title" content="Červená vína - Víno Iris" />
         <meta
           name="description"
-          content="Vinařství Iris Pavlov - rodinné vinařství z Pavlova"
+          content="Víno Iris Pavlov - rodinné vinařství z Pavlova"
         />
 
-        <meta property="og:title" content="Vinařství Iris - červená vína" />
+        <meta property="og:title" content="Víno Iris - červená vína" />
         <meta property="og:type" content="website" />
         <meta
           property="og:description"
-          content="Vinařství Iris Pavlov - rodinné vinařství z Pavlova."
+          content="Víno Iris Pavlov - rodinné vinařství z Pavlova."
         />
         <meta
           property="og:image"
           content="https://wine-shop-front.vercel.app/bottlePal.png"
         />
-        <meta property="og:url" content="https://irispavlov.cz/cervena-vina" />
+        <meta property="og:url" content="https://vinoiris.cz/cervena-vina" />
       </Head>
 
       <main>
