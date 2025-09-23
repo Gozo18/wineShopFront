@@ -78,7 +78,7 @@ export default function Home() {
             property="og:image"
             content="https://wine-shop-front.vercel.app/bottlePal.png"
           />
-          <meta property="og:url" content="https://irispavlov.cz" />
+          <meta property="og:url" content="https://vinoiris.cz" />
 
           <script
             type="application/ld+json"

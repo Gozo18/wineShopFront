@@ -70,7 +70,7 @@ function kontakty() {
           <p>Podhradní 180</p>
           <p>692 01 Pavlov</p>
           <p>
-            e-mail: <a href="mailto:info@irispavlov.cz">info@vinoiris.cz</a>
+            e-mail: <a href="mailto:info@vinoiris.cz">info@vinoiris.cz</a>
           </p>
           <p>
             telefon: <a href="tel:+420602528545">+420 602 528 545</a>

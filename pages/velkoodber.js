@@ -62,7 +62,7 @@ function velkoodber() {
           property="og:image"
           content="https://wine-shop-front.vercel.app/bottlePal.png"
         />
-        <meta property="og:url" content="https://irispavlov.cz" />
+        <meta property="og:url" content="https://vinoiris.cz" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -104,7 +104,7 @@ function velkoodber() {
           <p className={styles.mainPar}>
             Pro nabídku sudových vín nás kontaktujte. Tel:
             <a href="tel:+420602528545">+420 602 528 545</a> Email:
-            <a href="mailto:info@irispavlov.cz">info@irispavlov.cz</a>
+            <a href="mailto:info@vinoiris.cz">info@vinoiris.cz</a>
           </p>
 
           <table className="table table-striped">

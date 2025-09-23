@@ -34,7 +34,7 @@ export default function bilaVina() {
             property="og:image"
             content="https://wine-shop-front.vercel.app/bottlePal.png"
           />
-          <meta property="og:url" content="https://irispavlov.cz/bila-vina" />
+          <meta property="og:url" content="https://vinoiris.cz/bila-vina" />
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
