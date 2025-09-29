@@ -74,3 +74,16 @@
     text-align: center;
   }
 }
+
+.summary {
+  text-align: right;
+
+  p {
+    font-size: 0.8rem !important;
+    margin: 0.5rem 0 !important;
+
+    span {
+      color: #005e24;
+    }
+  }
+}

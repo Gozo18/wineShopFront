@@ -190,9 +190,7 @@ export default function ProductDetails() {
             >
               <div className={styles.detailPrice}>
                 <div>
-                  <strong>Cena:</strong>
-                </div>
-                <div>
+                  <strong>Cena:</strong>{" "}
                   <span itemProp="price" content="1000.00">
                     {price}
                   </span>
@@ -201,27 +199,10 @@ export default function ProductDetails() {
                     Kč
                   </span>
                 </div>
-                <div>
-                  <span>
-                    <BsBoxSeam /> {price6Pack},-
-                  </span>
-                </div>
-                <div>
-                  <span>
-                    <BsBoxSeam />
-                    <BsBoxSeam />
-                    <BsBoxSeam /> {price18Pack},-
-                  </span>
-                </div>
-                <div>
-                  <span>
-                    <BsBoxSeam />
-                    <BsBoxSeam />
-                    <BsBoxSeam />
-                    <BsBoxSeam />
-                    <BsBoxSeam /> {price30Pack},-
-                  </span>
-                </div>
+              </div>
+              <div className={styles.detailDiscount}>
+                <p>Sleva za každých 6 ks 100,-Kč na kartón</p>
+                <p>Za každých 30 ks dodatečná sleva 200,- Kč</p>
               </div>
             </div>
             <div className={styles.quantityBox}>

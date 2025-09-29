@@ -1,42 +1,52 @@
-import Link from "next/link";
-import Image from 'next/image';
-import { useStateContext } from "../lib/context";
-import { useEffect, useState } from "react";
-import { BsPlusSquare, BsDashSquare, BsBoxSeam, } from "react-icons/bs";
+import Link from "next/link"
+import Image from "next/image"
+import { useStateContext } from "../lib/context"
+import { useEffect, useState } from "react"
+import { BsPlusSquare, BsDashSquare, BsBoxSeam } from "react-icons/bs"
 
-import "bootstrap/dist/css/bootstrap.min.css";
-import styles from "../styles/Products.module.scss";
+import "bootstrap/dist/css/bootstrap.min.css"
+import styles from "../styles/Products.module.scss"
 
 export default function Product({ product }) {
-  const { onAdd } = useStateContext();
+  const { onAdd } = useStateContext()
 
-  const [qty, setQty] = useState(1);
+  const [qty, setQty] = useState(1)
 
   //Increase product countity
   const increaseQty = () => {
-    setQty((prevQty) => prevQty + 1);
-  };
+    setQty((prevQty) => prevQty + 1)
+  }
   //Decrease product quantity
   const decreaseQty = () => {
     setQty((prevQty) => {
-      if (prevQty - 1 < 1) return 1;
-      return prevQty - 1;
-    });
-  };
+      if (prevQty - 1 < 1) return 1
+      return prevQty - 1
+    })
+  }
 
   const resetQuantity = () => {
-    setQty(1);
-  };
+    setQty(1)
+  }
   useEffect(() => {
-    resetQuantity();
-  }, []);
+    resetQuantity()
+  }, [])
 
-  const { name, price, price6Pack, price18Pack, price30Pack, image, slug, year, sweetness, attribute } =
-    product.attributes;
+  const {
+    name,
+    price,
+    price6Pack,
+    price18Pack,
+    price30Pack,
+    image,
+    slug,
+    year,
+    sweetness,
+    attribute,
+  } = product.attributes
 
   return (
-    <div className='col-6 col-lg-4 col-xl-3'>
-      <div className='card w-100'>
+    <div className="col-6 col-lg-4 col-xl-3">
+      <div className="card w-100">
         <Link href={`/produkt/${slug}`}>
           <a className={styles.imageBox}>
             <Image
@@ -46,7 +56,7 @@ export default function Product({ product }) {
             />
           </a>
         </Link>
-        <div className='card-body'>
+        <div className="card-body">
           <Link href={`/produkt/${slug}`}>
             <a className={styles.headerBox}>
               <h2>{name}</h2>
@@ -56,9 +66,10 @@ export default function Product({ product }) {
             </a>
           </Link>
           <h3 className={styles.price}>{price},-</h3>
-          <p className={styles.pricePack}><BsBoxSeam /> {price6Pack},-</p>
+          {/* <p className={styles.pricePack}><BsBoxSeam /> {price6Pack},-</p>
           <p className={styles.pricePack}><BsBoxSeam /><BsBoxSeam /><BsBoxSeam /> {price18Pack},-</p>
-          <p className={styles.pricePack}><BsBoxSeam /><BsBoxSeam /><BsBoxSeam /><BsBoxSeam /><BsBoxSeam /> {price30Pack},-</p>
+          <p className={styles.pricePack}><BsBoxSeam /><BsBoxSeam /><BsBoxSeam /><BsBoxSeam /><BsBoxSeam /> {price30Pack},-</p> */}
+          <p className={styles.pricePack}>sleva za 6ks 100,- Kč</p>
           <div className={styles.quantityBox}>
             <div onClick={decreaseQty}>
               <BsDashSquare />
@@ -70,14 +81,14 @@ export default function Product({ product }) {
           </div>
           <button
             onClick={() => {
-              onAdd(product.attributes, qty);
+              onAdd(product.attributes, qty)
             }}
-            className='btn btn-primary'
+            className="btn btn-primary"
           >
             Koupit
           </button>
         </div>
       </div>
     </div>
-  );
+  )
 }

@@ -138,31 +138,7 @@ function kosik() {
                           {item.sweetness}
                         </h3>
                         <p>Kusů: {item.quantity}</p>
-                        {totalQuantities < 6 && <p>Cena: {item.price},- Kč</p>}
-                        {totalQuantities > 5 && totalQuantities < 18 && (
-                          <>
-                            <p>
-                              <del>Cena: {item.price},- Kč</del>
-                            </p>
-                            <p>Cena: {item.price6Pack},- Kč</p>
-                          </>
-                        )}
-                        {totalQuantities > 17 && totalQuantities < 30 && (
-                          <>
-                            <p>
-                              <del>Cena: {item.price},- Kč</del>
-                            </p>
-                            <p>Cena: {item.price18Pack},- Kč</p>
-                          </>
-                        )}
-                        {totalQuantities > 29 && (
-                          <>
-                            <p>
-                              <del>Cena: {item.price},- Kč</del>
-                            </p>
-                            <p>Cena: {item.price30Pack},- Kč</p>
-                          </>
-                        )}
+                        <p>Cena: {item.price},- Kč</p>
                       </div>
                     </div>
                   </div>
@@ -170,7 +146,26 @@ function kosik() {
               )
             })}
           {cartItems.length >= 1 && (
-            <div>
+            <div className={styles.summary}>
+              <p>
+                Sleva za každých 6 ks 100,-Kč:{" "}
+                <span>{Math.floor(totalQuantities / 6) * 100},- Kč</span>
+              </p>
+              <p>
+                Sleva za každých 30 ks 200,- Kč:{" "}
+                <span>
+                  {Math.floor(totalQuantities / 30) * 200}
+                  ,- Kč
+                </span>
+              </p>
+              <p>
+                Sleva celkem:{" "}
+                <span>
+                  {Math.floor(totalQuantities / 6) * 100 +
+                    Math.floor(totalQuantities / 30) * 200}
+                  ,- Kč
+                </span>
+              </p>
               <h3 className="text-end">Celkem {totalPrice},- Kč</h3>
             </div>
           )}

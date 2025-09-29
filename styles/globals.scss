@@ -127,12 +127,6 @@ textarea {
 
   .modal {
     display: block;
-
-    .modal-title {
-      margin-bottom: 0 !important;
-      font-size: 1.5rem !important;
-      font-weight: bold;
-    }
   }
 }
 
@@ -178,7 +172,7 @@ textarea {
 }
 
 .slick-list {
-  height: 43rem;
+  height: 34rem;
 
   @media (max-width: 991px) {
     height: 31rem;
@@ -205,9 +199,13 @@ textarea {
   @media (max-width: 399px) {
     height: 8rem !important;
   }
+}
 
+.slick-slide {
   h3 {
-    font-size: 1rem !important;
+    font-family: "Caveat", cursive;
+    font-weight: bold;
+    font-size: 1.3rem !important;
 
     @media (max-width: 991px) {
       font-size: 0.8rem !important;
@@ -254,5 +252,50 @@ textarea {
     @media (max-width: 991px) {
       padding: 5px;
     }
+  }
+}
+
+#__next .modal-dialog {
+  margin-right: auto;
+  margin-left: auto;
+  width: 60vw;
+  max-width: 60vw;
+  height: 60vh;
+  max-height: 60vh;
+
+  @media (max-width: 991px) {
+    width: 80vw;
+    max-width: 80vw;
+    height: 80vh;
+    max-height: 80vh;
+  }
+}
+
+#__next .modal-content {
+  height: 100%;
+}
+
+#__next .modal .modal-header .modal-title {
+  width: 100%;
+  text-align: center;
+  font-family: "Caveat", cursive;
+  font-size: 4rem;
+
+  @media (max-width: 991px) {
+    font-size: 2rem;
+  }
+}
+
+#__next .modal .modal-body {
+  p {
+    font-size: 1.3rem;
+
+    @media (max-width: 991px) {
+      font-size: 1rem;
+    }
+  }
+
+  span {
+    color: rgb(161, 2, 2);
   }
 }

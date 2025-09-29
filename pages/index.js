@@ -146,10 +146,23 @@ export default function Home() {
                     ></button>
                   </div>
                   <div className="modal-body">
-                    <p>
-                      Varování - pokud vám není 18 a více let, prosím, opusťte
-                      tyto stránky.
-                    </p>
+                    <div className={styles.warningBoxInner}>
+                      <div className={styles.warningBoxImage}>
+                        <img
+                          src="/palava.png"
+                          alt="Víno Iris Pavlov"
+                          height={250}
+                        />
+                      </div>
+                      <div className={styles.warningBoxText}>
+                        <h3>Vítejte na stránkách Víno Iris</h3>
+                        <p>VAROVÁNÍ</p>
+                        <p>
+                          Pokud vám <span>není 18 a více let</span>, prosím,
+                          opusťte tyto stránky.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                   <div className="modal-footer">
                     <button

@@ -13,12 +13,12 @@
 .close {
   position: absolute;
   top: 2%;
-  right: 15%;
+  right: 5rem;
   z-index: 2;
   cursor: pointer;
 
   @media (max-width: 991px) {
-    right: 5%;
+    right: 1rem;
   }
 
   svg {
@@ -60,7 +60,7 @@
     padding: 1.5rem 1rem;
   }
 
-  >div {
+  > div {
     width: 100%;
   }
 
@@ -159,5 +159,16 @@
   }
   svg {
     color: #494949;
+  }
+}
+
+.summary {
+  p {
+    font-size: 0.8rem !important;
+    margin: 0.5rem 0 !important;
+
+    span {
+      color: #005e24;
+    }
   }
 }

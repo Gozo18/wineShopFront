@@ -51,12 +51,12 @@ function Nav({ router }) {
                 ) : (
                   <></>
                 )}
-                <Link href="/velkoodber">
+                {/* <Link href="/velkoodber">
                   <div className={styles.navContacts}>
                     <HiOutlineRectangleStack />
                     <div className={styles.navheading}>Velkoodběr</div>
                   </div>
-                </Link>
+                </Link> */}
                 <Link href="/kontakty">
                   <div className={styles.navContacts}>
                     <HiOutlineIdentification />

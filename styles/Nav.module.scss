@@ -1,6 +1,6 @@
 .navSpace {
   width: 100%;
-  min-height: 7rem;
+  min-height: 6rem;
 
   @media (max-width: 991px) {
     min-height: 1.5rem;
@@ -42,7 +42,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 7rem;
+  min-height: 6rem;
 
   @media (max-width: 991px) {
     min-height: 4rem;
@@ -88,7 +88,7 @@
 
   .navheading {
     margin: 0;
-    padding: 0.25rem;
+    padding: 0 0.25rem;
     font-size: 1.4rem !important;
     font-family: "Caveat", cursive !important;
 
@@ -98,7 +98,7 @@
   }
 
   svg {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
 
     @media (max-width: 991px) {
       font-size: 1.4rem;

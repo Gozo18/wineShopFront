@@ -23,15 +23,24 @@
 
 .detailPrice {
   display: flex;
-  justify-content: space-between;
 
   @media (max-width: 991px) {
     flex-direction: column;
     align-items: center;
 
-    >div {
+    > div {
       margin-bottom: 0.5rem;
     }
+  }
+}
+
+.detailDiscount {
+  margin: 1rem 0;
+
+  p {
+    margin: 1rem 0 !important;
+    color: #005e24;
+    font-size: 0.8rem !important;
   }
 }
 
@@ -42,7 +51,7 @@
       text-align: center;
     }
   }
-  
+
   h2 {
     font-weight: 700;
 
