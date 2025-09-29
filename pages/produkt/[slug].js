@@ -201,7 +201,7 @@ export default function ProductDetails() {
                 </div>
               </div>
               <div className={styles.detailDiscount}>
-                <p>Sleva za každých 6 ks 100,-Kč na kartón</p>
+                <p>Sleva za každých 6 ks 100,-Kč</p>
                 <p>Za každých 30 ks dodatečná sleva 200,- Kč</p>
               </div>
             </div>

@@ -122,7 +122,7 @@ export default function Cart() {
           {cartItems.length >= 1 && (
             <div className={styles.summary}>
               <p>
-                Sleva za každých 6 ks 100,-Kč na kartón:{" "}
+                Sleva za každých 6 ks 100,-Kč:{" "}
                 <span>{Math.floor(totalQuantities / 6) * 100},- Kč</span>
               </p>
               <p>

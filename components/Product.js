@@ -69,7 +69,10 @@ export default function Product({ product }) {
           {/* <p className={styles.pricePack}><BsBoxSeam /> {price6Pack},-</p>
           <p className={styles.pricePack}><BsBoxSeam /><BsBoxSeam /><BsBoxSeam /> {price18Pack},-</p>
           <p className={styles.pricePack}><BsBoxSeam /><BsBoxSeam /><BsBoxSeam /><BsBoxSeam /><BsBoxSeam /> {price30Pack},-</p> */}
-          <p className={styles.pricePack}>sleva za 6ks 100,- Kč</p>
+          <p className={styles.pricePack}>Sleva za každých 6 ks 100,-Kč</p>
+          <p className={styles.pricePack}>
+            Za každých 30 ks dodatečná sleva 200,- Kč
+          </p>
           <div className={styles.quantityBox}>
             <div onClick={decreaseQty}>
               <BsDashSquare />
