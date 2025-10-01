@@ -106,7 +106,7 @@
   padding: 0 2rem 4rem;
 
   @media (max-width: 991px) {
-    padding: 0 2rem 2rem;
+    padding: 0 2rem 0;
   }
 }
 
@@ -119,6 +119,10 @@
   img {
     height: 12rem;
     width: auto;
+
+    @media (max-width: 991px) {
+      height: 10rem;
+    }
   }
 }
 
