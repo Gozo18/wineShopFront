@@ -117,7 +117,7 @@ function objednavka() {
             <p>Děkujeme za nákup!</p>
             <p>Budeme vás kontaktovat.</p>
             <p>
-              <Link href="/" className={styles.backLink}>
+              <Link href="/">
                 <a>zpět na hlavní stránku.</a>
               </Link>
             </p>
