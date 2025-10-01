@@ -35,14 +35,18 @@ function Nav({ router }) {
                       onClick={() => setShowCart(true)}
                       className={styles.navCart}
                     >
-                      {totalQuantities > 0 && (
-                        <motion.span
-                          animate={{ scale: 1 }}
-                          initial={{ scale: 0 }}
-                        >
-                          {totalQuantities}
-                        </motion.span>
-                      )}
+                      <AnimatePresence mode="popLayout">
+                        {totalQuantities > 0 && (
+                          <motion.span
+                            key={totalQuantities}
+                            animate={{ scale: [1, 5, 1] }}
+                            initial={{ scale: 0 }}
+                            transition={{ ease: "easeOut", duration: 0.5 }}
+                          >
+                            {totalQuantities}
+                          </motion.span>
+                        )}
+                      </AnimatePresence>
                       <HiOutlineShoppingCart />
                       <div className={styles.navheading}>Košík</div>
                     </div>
