@@ -4,7 +4,7 @@ import { BsPlusSquare, BsDashSquare, BsXSquare } from "react-icons/bs"
 import Link from "next/link"
 import { useEffect } from "react"
 import { useStateContext } from "../lib/context"
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 
 import styles from "../styles/Cart.module.scss"
 
@@ -27,13 +27,10 @@ export default function Cart() {
       )
     })
     if (totalQuantities > 5 && totalQuantities < 30) {
-      console.log(totalPrice)
       setTotalPrice(
         (prevTotalPrice) =>
           prevTotalPrice - Math.round(totalQuantities / 6) * 100
       )
-      console.log(Math.round(totalQuantities / 6) * 100)
-      console.log(totalPrice)
     } else if (totalQuantities > 29) {
       setTotalPrice(
         (prevTotalPrice) =>
@@ -123,14 +120,38 @@ export default function Cart() {
             <div className={styles.summary}>
               <p>
                 Sleva za každých 6 ks 100,-Kč:{" "}
-                <span>{Math.floor(totalQuantities / 6) * 100},- Kč</span>
+                <AnimatePresence mode="popLayout">
+                  {totalQuantities > 0 && (
+                    <motion.span
+                      key={Math.floor(totalQuantities / 6) * 100}
+                      animate={{ scale: [1, 1.5, 1] }}
+                      initial={{ scale: 1 }}
+                      transition={{ ease: "easeOut", duration: 0.5 }}
+                    >
+                      {Math.floor(totalQuantities / 6) * 100},- Kč
+                    </motion.span>
+                  )}
+                </AnimatePresence>
+                {/* <span>{Math.floor(totalQuantities / 6) * 100},- Kč</span> */}
               </p>
               <p>
                 Za každých 30 ks dodatečná sleva 200,- Kč:{" "}
-                <span>
+                <AnimatePresence mode="popLayout">
+                  {totalQuantities > 0 && (
+                    <motion.span
+                      key={Math.floor(totalQuantities / 30) * 100}
+                      animate={{ scale: [1, 1.5, 1] }}
+                      initial={{ scale: 1 }}
+                      transition={{ ease: "easeOut", duration: 0.5 }}
+                    >
+                      {Math.floor(totalQuantities / 30) * 200},- Kč
+                    </motion.span>
+                  )}
+                </AnimatePresence>
+                {/* <span>
                   {Math.floor(totalQuantities / 30) * 200}
                   ,- Kč
-                </span>
+                </span> */}
               </p>
               <p>
                 Sleva celkem:{" "}

@@ -168,7 +168,11 @@
     margin: 0.5rem 0 !important;
 
     span {
-      color: #005e24;
+      display: inline-block;
+      padding: 0 0.3rem;
+      background-color: #005e24;
+      color: #fff;
+      border-radius: 0.25rem;
     }
   }
 }
