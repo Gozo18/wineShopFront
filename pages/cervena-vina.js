@@ -99,17 +99,6 @@ export default function cervenaVina() {
       <main>
         <Header />
         <h2 className={styles.wineHeader}>Naše červená vína</h2>
-        <div className={styles.filterBox}>
-          <Link href="/">
-            <a className={styles.allWine}>všechna vína</a>
-          </Link>
-          <Link href="/bila-vina">
-            <a className={styles.whiteWine}>bílá vína</a>
-          </Link>
-          <Link href="/ruzova-vina">
-            <a className={styles.roseWine}>růžová vína</a>
-          </Link>
-        </div>
         <div className="row">
           {products.map((product) => (
             <Product key={product.attributes.slug} product={product} />

@@ -1,9 +1,7 @@
 import Head from "next/head"
 import { useQuery } from "urql"
 import { PRODUCT_QUERY } from "../lib/query"
-import Product from "../components/Product"
 import Header from "../components/Header"
-import Link from "next/link"
 import { useRouter } from "next/router"
 import { useStateContext } from "../lib/context"
 import WineSlider from "../components/WineSlider"
@@ -113,23 +111,20 @@ export default function Home() {
         <main>
           <Header />
           <WineSlider products={products} />
-          <h2 className={styles.wineHeader}>Naše vína</h2>
-          <div className={styles.filterBox}>
-            <Link href="/bila-vina">
-              <a className={styles.whiteWine}>bílá vína</a>
-            </Link>
-            <Link href="/cervena-vina">
-              <a className={styles.redWine}>červená vína</a>
-            </Link>
-            <Link href="/ruzova-vina">
-              <a className={styles.roseWine}>růžová vína</a>
-            </Link>
-          </div>
+          {/* <h2 className={styles.wineHeader}>Naše vína</h2>
           <div className="row">
             {products.map((product) => (
               <Product key={product.attributes.slug} product={product} />
             ))}
-          </div>
+          </div> */}
+          <h2 className={styles.wineHeader}>O nás</h2>
+          <p className={styles.mainPar}>
+            Rodinné vinařství Zdeňka Šilinka se nachází pod Pálavou v malebné
+            vinařské obci Pavlov, kde má vinařství mnoha set letou tradici. V
+            minulém století ještě platilo, že ke každému domku patří sklep a ke
+            sklepu vinohrad. Vína vyrábíme klasickými postupy s přihlédnutím k
+            novým výrobním trendům.
+          </p>
         </main>
         {showWarning && (
           <div className="homepageOverlay">

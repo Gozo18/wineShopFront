@@ -1,30 +1,27 @@
 import Head from "next/head"
 import { useQuery } from "urql"
-import { GET_COLOR_PRODUCT_QUERY } from "../lib/query"
+import { PRODUCT_QUERY } from "../lib/query"
 import Product from "../components/Product"
 import Header from "../components/Header"
 import Link from "next/link"
 import styles from "../styles/Home.module.scss"
 
-export default function ruzovaVina() {
-  const [results] = useQuery({
-    query: GET_COLOR_PRODUCT_QUERY,
-    variables: { color: "růžové" },
-  })
+export default function naseVina() {
+  const [results] = useQuery({ query: PRODUCT_QUERY })
   const { data, fetching, error } = results
 
   if (fetching)
     return (
       <div>
         <Head>
-          <title>Růžová vína - Víno Iris</title>
-          <meta name="title" content="Růžová vína - Víno Iris" />
+          <title>Naše vína - Víno Iris</title>
+          <meta name="title" content="Naše vína - Víno Iris" />
           <meta
             name="description"
             content="Víno Iris Pavlov - rodinné vinařství z Pavlova"
           />
 
-          <meta property="og:title" content="Víno Iris - růžová vína" />
+          <meta property="og:title" content="Víno Iris - naše vína" />
           <meta property="og:type" content="website" />
           <meta
             property="og:description"
@@ -34,8 +31,7 @@ export default function ruzovaVina() {
             property="og:image"
             content="https://wine-shop-front.vercel.app/bottlePal.png"
           />
-          <meta property="og:url" content="https://vinopavlov.cz/ruzova-vina" />
-
+          <meta property="og:url" content="https://vinoiris.cz/nase-vina" />
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
@@ -44,7 +40,7 @@ export default function ruzovaVina() {
                 "@type": ["Winery", "TouristAttraction"],
                 name: "Víno Iris",
                 description:
-                  "Rodinné vinařství Zdeňka Šilinka se nachází pod Pálavou ve vinařské obci Pavlov. Růžová vína.",
+                  "Rodinné vinařství Zdeňka Šilinka se nachází pod Pálavou ve vinařské obci Pavlov. Naše vína.",
                 address: {
                   "@type": "PostalAddress",
                   addressLocality: "Pavlov",
@@ -57,10 +53,10 @@ export default function ruzovaVina() {
                 openingHours: ["Po-Su 9:00-19:00"],
                 touristType: ["Wine tourism"],
                 telephone: ["+420602528545"],
-                sameAs: "http://www.vinoiris.cz/ruzova-vina",
+                sameAs: "http://www.vinoiris.cz/bila-vina",
                 email: "info@vinoiris.cz",
                 image:
-                  "https://www.vinoiris.cz/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdgxiw0ujm%2Fimage%2Fupload%2Fv1681570595%2Flarge_pa21_polosladke_c93aed8add.png&w=1920&q=75",
+                  "https://www.vinarstviiris.cz/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdgxiw0ujm%2Fimage%2Fupload%2Fv1681570595%2Flarge_pa21_polosladke_c93aed8add.png&w=1920&q=75",
               }),
             }}
           />
@@ -76,14 +72,14 @@ export default function ruzovaVina() {
   return (
     <div>
       <Head>
-        <title>Růžová vína - Víno Iris</title>
-        <meta name="title" content="Růžová vína - Víno Iris" />
+        <title>Naše vína - Víno Iris</title>
+        <meta name="title" content="Naše vína - Víno Iris" />
         <meta
           name="description"
           content="Víno Iris Pavlov - rodinné vinařství z Pavlova"
         />
 
-        <meta property="og:title" content="Víno Iris - růžová vína" />
+        <meta property="og:title" content="Víno Iris - naše vína" />
         <meta property="og:type" content="website" />
         <meta
           property="og:description"
@@ -93,12 +89,12 @@ export default function ruzovaVina() {
           property="og:image"
           content="https://wine-shop-front.vercel.app/bottlePal.png"
         />
-        <meta property="og:url" content="https://vinoiris.cz/ruzova-vina" />
+        <meta property="og:url" content="https://vinoiris.cz/nase-vina" />
       </Head>
 
       <main>
         <Header />
-        <h2 className={styles.wineHeader}>Naše růžová vína</h2>
+        <h2 className={styles.wineHeader}>Naše vína</h2>
         <div className="row">
           {products.map((product) => (
             <Product key={product.attributes.slug} product={product} />
