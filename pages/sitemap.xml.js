@@ -10,6 +10,9 @@ function generateSiteMap(products) {
        <loc>${URL}</loc>
      </url>
      <url>
+       <loc>${URL}/nase-vina</loc>
+     </url>
+     <url>
        <loc>${URL}/bila-vina</loc>
      </url>
      <url>
@@ -17,9 +20,6 @@ function generateSiteMap(products) {
      </url>
      <url>
        <loc>${URL}/ruzova-vina</loc>
-     </url>
-     <url>
-       <loc>${URL}/velkoodber</loc>
      </url>
       <url>
        <loc>${URL}/kontakty</loc>
