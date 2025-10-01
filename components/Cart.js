@@ -132,7 +132,6 @@ export default function Cart() {
                     </motion.span>
                   )}
                 </AnimatePresence>
-                {/* <span>{Math.floor(totalQuantities / 6) * 100},- Kč</span> */}
               </p>
               <p>
                 Za každých 30 ks dodatečná sleva 200,- Kč:{" "}
@@ -148,18 +147,26 @@ export default function Cart() {
                     </motion.span>
                   )}
                 </AnimatePresence>
-                {/* <span>
-                  {Math.floor(totalQuantities / 30) * 200}
-                  ,- Kč
-                </span> */}
               </p>
               <p>
                 Sleva celkem:{" "}
-                <span>
-                  {Math.floor(totalQuantities / 6) * 100 +
-                    Math.floor(totalQuantities / 30) * 200}
-                  ,- Kč
-                </span>
+                <AnimatePresence mode="popLayout">
+                  {totalQuantities > 0 && (
+                    <motion.span
+                      key={
+                        Math.floor(totalQuantities / 6) * 100 +
+                        Math.floor(totalQuantities / 30) * 200
+                      }
+                      animate={{ scale: [1, 1.5, 1] }}
+                      initial={{ scale: 1 }}
+                      transition={{ ease: "easeOut", duration: 0.5 }}
+                    >
+                      {Math.floor(totalQuantities / 6) * 100 +
+                        Math.floor(totalQuantities / 30) * 200}
+                      ,- Kč
+                    </motion.span>
+                  )}
+                </AnimatePresence>
               </p>
               <h3>Celkem {totalPrice},- Kč</h3>
               <Link href={"/kosik"}>
