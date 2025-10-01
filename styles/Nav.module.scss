@@ -45,6 +45,7 @@
   min-height: 6rem;
 
   @media (max-width: 991px) {
+    margin: 0 0.5rem;
     min-height: 4rem;
     background-color: #fff;
   }
@@ -79,11 +80,7 @@
   cursor: pointer;
 
   @media (max-width: 991px) {
-    margin-left: 0.5rem;
-  }
-
-  @media (max-width: 350px) {
-    margin-left: 0;
+    margin-left: 0.8rem;
   }
 
   .navheading {

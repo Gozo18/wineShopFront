@@ -1,24 +1,27 @@
 .backLink {
-    color: #2d2d2d;
-    text-decoration: none;
-    cursor: pointer;
+  display: block;
+  margin-top: 1rem;
+  color: #2d2d2d;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 #contactBox {
-    h1, p {
-        text-align: center;
-    }
+  h1,
+  p {
+    text-align: center;
+  }
 
-    h1 {
-        margin-bottom: 4rem;
-    }
+  h1 {
+    margin-bottom: 4rem;
+  }
 
-    p:nth-child(2) {
-        font-weight: bold;
-    }
+  p:nth-child(2) {
+    font-weight: bold;
+  }
 
-    iframe {
-        margin: 4rem 0;
-        width: 100%;
-    }
+  iframe {
+    margin: 4rem 0;
+    width: 100%;
+  }
 }
