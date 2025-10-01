@@ -258,16 +258,12 @@ textarea {
 #__next .modal-dialog {
   margin-right: auto;
   margin-left: auto;
-  width: 60vw;
-  max-width: 60vw;
-  height: 60vh;
-  max-height: 60vh;
+  width: 40vw;
+  max-width: 40vw;
 
   @media (max-width: 991px) {
     width: 80vw;
     max-width: 80vw;
-    height: 80vh;
-    max-height: 80vh;
   }
 }
 
