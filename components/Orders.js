@@ -110,12 +110,6 @@ function Orders() {
     return new Date(value).toLocaleDateString(locale)
   }
 
-  let totalQuantities = 0
-
-  order.attributes.Orderedproduct.map(
-    (product) => (totalQuantities += product.productquantity)
-  )
-
   return (
     <div className="row">
       <div className="col-12 mb-2 mb-lg-4">
@@ -203,13 +197,7 @@ function Orders() {
                           </div>
                         ))}
                         <div className={styles.totalPrice}>
-                          <span>Celková sleva:</span>{" "}
-                          {Math.floor(totalQuantities / 6) * 100 +
-                            Math.floor(totalQuantities / 30) * 200}
-                          ,-
-                        </div>
-                        <div className={styles.totalPrice}>
-                          <span>Celková cena objednávky:</span>{" "}
+                          <span>Celková cena objednávky po slevě:</span>{" "}
                           {order.attributes.Totalprice},-
                         </div>
                       </div>
