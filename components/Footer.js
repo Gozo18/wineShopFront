@@ -11,6 +11,9 @@ function Footer() {
         </Link>
       </div>
       <div>
+        <Link href="/return-policy">Vrácení a reklamace</Link>
+      </div>
+      <div>
         ©2025 <Link href="/">vinoiris.cz</Link>
       </div>
     </div>
